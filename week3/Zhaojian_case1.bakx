@@ -1,4 +1,4 @@
-<project name="Zhaojian_case1" version="4.5.0" schema="0" Target="EMTDC">
+<project name="Zhaojian_case" version="4.5.0" schema="0" Target="EMTDC">
   <paramlist name="Settings">
     <param name="creator" value="wxy, 1335267265" />
     <param name="time_duration" value="18" />
@@ -21,7 +21,7 @@
     <param name="Warn" value="1" />
     <param name="Check" value="15" />
     <param name="description" value="" />
-    <param name="revisor" value="76074, 1539053259" />
+    <param name="revisor" value="Dean, 1539000781" />
     <param name="architecture" value="windows" />
     <param name="Source" value="" />
     <param name="latency_count" value="100" />
@@ -24678,7 +24678,7 @@
         </Frame>
       </schematic>
     </Definition>
-    <Definition classid="StationDefn" name="Station" group="" url="" version="" build="" crc="5204209" instances="1" key="" view="false">
+    <Definition classid="StationDefn" name="Station" group="" url="" version="" build="" crc="78783929" instances="1" key="" view="false">
       <paramlist name="">
         <param name="Description" value="" />
       </paramlist>
@@ -24692,12 +24692,12 @@
           <param name="bus_expand_y" value="8" />
           <param name="bus_length" value="4" />
         </paramlist>
-        <Wire classid="WireBranch" name="droopIIPffP_1_test:Main" x="180" y="180" w="62" h="80" orient="0" defn="Zhaojian_case1:Main" id="529762704" recv="-1" send="-1" back="-1">
+        <Wire classid="WireBranch" name="droopIIPffP_1_test:Main" x="180" y="180" w="62" h="80" orient="0" defn="Zhaojian_case:Main" id="529762704" recv="-1" send="-1" back="-1">
           <vertex x="0" y="0" />
           <vertex x="0" y="18" />
           <vertex x="54" y="54" />
           <vertex x="54" y="72" />
-          <User classid="UserCmp" name="droopIIPffP_1_test:Main" id="529762704" x="0" y="0" w="0" h="0" z="-1" orient="0" defn="Zhaojian_case1:Main" link="529762704">
+          <User classid="UserCmp" name="droopIIPffP_1_test:Main" id="529762704" x="0" y="0" w="0" h="0" z="-1" orient="0" defn="Zhaojian_case:Main" link="529762704">
             <paramlist link="-1" name="">
               <param name="Ls1" value="0.3 [mH]" />
               <param name="Ls2" value="0.3 [mH]" />
@@ -24803,7 +24803,7 @@
         </Wire>
       </schematic>
     </Definition>
-    <Definition classid="UserCmpDefn" name="Main" group="" url="" version="" build="" crc="19971008" instances="1" key="" view="false" date="1539000362">
+    <Definition classid="UserCmpDefn" name="Main" group="" url="" version="" build="" crc="102734755" instances="1" key="" view="false" date="1539000362">
       <paramlist>
         <param name="Description" value="" />
       </paramlist>
@@ -25063,12 +25063,12 @@
               <param name="ymin" value="-1" />
               <param name="ymax" value="1" />
             </paramlist>
-            <Curve classid="Curve" name="" link="245139718" color="0" bold="0" show="255" mode="0" />
-            <Curve classid="Curve" name="" link="332088548" color="0" bold="0" show="255" mode="0" />
-            <Curve classid="Curve" name="" link="457715545" color="0" bold="0" show="255" mode="0" />
-            <Curve classid="Curve" name="" link="68086289" color="0" bold="0" show="255" mode="0" />
-            <Curve classid="Curve" name="" link="833320050" color="0" bold="0" show="255" mode="0" />
-            <Curve classid="Curve" name="" link="175447624" color="0" bold="0" show="255" mode="0" />
+            <Curve classid="Curve" name="Pref1" link="245139718" color="0" bold="0" show="255" mode="0" />
+            <Curve classid="Curve" name="Pref2" link="332088548" color="0" bold="0" show="255" mode="0" />
+            <Curve classid="Curve" name="Pref3" link="457715545" color="0" bold="0" show="255" mode="0" />
+            <Curve classid="Curve" name="Pref4" link="68086289" color="0" bold="0" show="255" mode="0" />
+            <Curve classid="Curve" name="Pref5" link="833320050" color="0" bold="0" show="255" mode="0" />
+            <Curve classid="Curve" name="Pref6" link="175447624" color="0" bold="0" show="255" mode="0" />
           </Graph>
         </Frame>
         <Frame classid="GraphFrame" name="frame" x="4734" y="1260" w="576" h="288" id="1020914022" link="-1">
@@ -25118,9 +25118,9 @@
               <param name="ymin" value="-1" />
               <param name="ymax" value="1" />
             </paramlist>
-            <Curve classid="Curve" name="" link="635617070" color="0" bold="0" show="255" mode="0" />
-            <Curve classid="Curve" name="" link="1150586922" color="0" bold="0" show="255" mode="0" />
-            <Curve classid="Curve" name="" link="829732385" color="0" bold="0" show="255" mode="0" />
+            <Curve classid="Curve" name="Pl1" link="635617070" color="0" bold="0" show="255" mode="0" />
+            <Curve classid="Curve" name="Pl2" link="1150586922" color="0" bold="0" show="255" mode="0" />
+            <Curve classid="Curve" name="Pl5" link="829732385" color="0" bold="0" show="255" mode="0" />
           </Graph>
         </Frame>
         <Wire classid="WireOrthogonal" name="" x="1152" y="72" w="8" h="1196" orient="0">
@@ -25550,9 +25550,9 @@
               <param name="ymin" value="-1" />
               <param name="ymax" value="1" />
             </paramlist>
-            <Curve classid="Curve" name="" link="247102536" color="0" bold="0" show="255" mode="0" />
-            <Curve classid="Curve" name="" link="2060122405" color="0" bold="0" show="254" mode="0" />
-            <Curve classid="Curve" name="" link="197126930" color="0" bold="0" show="254" mode="0" />
+            <Curve classid="Curve" name="VLa_rms" link="247102536" color="0" bold="0" show="255" mode="0" />
+            <Curve classid="Curve" name="VLb_rms" link="2060122405" color="0" bold="0" show="254" mode="0" />
+            <Curve classid="Curve" name="VLc_rms" link="197126930" color="0" bold="0" show="254" mode="0" />
           </Graph>
         </Frame>
         <Frame classid="GraphFrame" name="frame" x="4734" y="972" w="576" h="288" id="1704488956" link="-1">
@@ -25602,12 +25602,12 @@
               <param name="ymin" value="-1" />
               <param name="ymax" value="1" />
             </paramlist>
-            <Curve classid="Curve" name="" link="1326578017" color="0" bold="0" show="255" mode="0" />
-            <Curve classid="Curve" name="" link="1192543483" color="0" bold="0" show="255" mode="0" />
-            <Curve classid="Curve" name="" link="1510979593" color="0" bold="0" show="255" mode="0" />
-            <Curve classid="Curve" name="" link="37596347" color="0" bold="0" show="255" mode="0" />
-            <Curve classid="Curve" name="" link="892520907" color="0" bold="0" show="255" mode="0" />
-            <Curve classid="Curve" name="" link="226405540" color="0" bold="0" show="255" mode="0" />
+            <Curve classid="Curve" name="z1" link="1326578017" color="0" bold="0" show="255" mode="0" />
+            <Curve classid="Curve" name="z2" link="1192543483" color="0" bold="0" show="255" mode="0" />
+            <Curve classid="Curve" name="z3" link="1510979593" color="0" bold="0" show="255" mode="0" />
+            <Curve classid="Curve" name="z4" link="37596347" color="0" bold="0" show="255" mode="0" />
+            <Curve classid="Curve" name="z5" link="892520907" color="0" bold="0" show="255" mode="0" />
+            <Curve classid="Curve" name="z6" link="226405540" color="0" bold="0" show="255" mode="0" />
           </Graph>
         </Frame>
         <User classid="UserCmp" name="master:resistor" defn="master:resistor" id="914865664" x="1044" y="144" w="52" h="29" z="1" orient="0" link="-1">
@@ -25988,18 +25988,18 @@
               <param name="crosshair" value="false" />
               <param name="manualscale" value="false" />
             </paramlist>
-            <Curve classid="Curve" name="" link="274543202" color="0" bold="0" show="255" mode="0" />
+            <Curve classid="Curve" name="w1" link="274543202" color="0" bold="0" show="255" mode="0" />
             <paramlist link="954671591" name="">
               <param name="ymin" value="-1" />
               <param name="ymax" value="1" />
             </paramlist>
-            <Curve classid="Curve" name="" link="1185497102" color="0" bold="0" show="255" mode="0" />
-            <Curve classid="Curve" name="" link="2001543048" color="0" bold="0" show="255" mode="0" />
-            <Curve classid="Curve" name="" link="927096107" color="0" bold="0" show="255" mode="0" />
-            <Curve classid="Curve" name="" link="1729043011" color="0" bold="0" show="255" mode="0" />
-            <Curve classid="Curve" name="" link="1607920025" color="0" bold="0" show="255" mode="0" />
-            <Curve classid="Curve" name="" link="458123570" color="0" bold="0" show="254" mode="0" />
-            <Curve classid="Curve" name="" link="2037094049" color="0" bold="0" show="254" mode="0" />
+            <Curve classid="Curve" name="w2" link="1185497102" color="0" bold="0" show="255" mode="0" />
+            <Curve classid="Curve" name="w3" link="2001543048" color="0" bold="0" show="255" mode="0" />
+            <Curve classid="Curve" name="w4" link="927096107" color="0" bold="0" show="255" mode="0" />
+            <Curve classid="Curve" name="w5" link="1729043011" color="0" bold="0" show="255" mode="0" />
+            <Curve classid="Curve" name="w6" link="1607920025" color="0" bold="0" show="255" mode="0" />
+            <Curve classid="Curve" name="wdr1" link="458123570" color="0" bold="0" show="254" mode="0" />
+            <Curve classid="Curve" name="wdr2" link="2037094049" color="0" bold="0" show="254" mode="0" />
           </Graph>
         </Frame>
         <Frame classid="GraphFrame" name="frame" x="4158" y="108" w="576" h="288" id="981450082" link="-1">
@@ -26049,7 +26049,7 @@
               <param name="ymin" value="-1" />
               <param name="ymax" value="1" />
             </paramlist>
-            <Curve classid="Curve" name="" link="1329077528" color="0" bold="0" show="255" mode="0" />
+            <Curve classid="Curve" name="f1" link="1329077528" color="0" bold="0" show="255" mode="0" />
           </Graph>
         </Frame>
         <Frame classid="GraphFrame" name="frame" x="4734" y="684" w="576" h="288" id="127083610" link="-1">
@@ -26099,12 +26099,12 @@
               <param name="ymin" value="-1" />
               <param name="ymax" value="1" />
             </paramlist>
-            <Curve classid="Curve" name="" link="862665036" color="0" bold="0" show="255" mode="0" />
-            <Curve classid="Curve" name="" link="106870882" color="0" bold="0" show="255" mode="0" />
-            <Curve classid="Curve" name="" link="288038187" color="0" bold="0" show="255" mode="0" />
-            <Curve classid="Curve" name="" link="2015124476" color="0" bold="0" show="255" mode="0" />
-            <Curve classid="Curve" name="" link="384969257" color="0" bold="0" show="255" mode="0" />
-            <Curve classid="Curve" name="" link="1709311162" color="0" bold="0" show="255" mode="0" />
+            <Curve classid="Curve" name="mu1" link="862665036" color="0" bold="0" show="255" mode="0" />
+            <Curve classid="Curve" name="mu2" link="106870882" color="0" bold="0" show="255" mode="0" />
+            <Curve classid="Curve" name="mu3" link="288038187" color="0" bold="0" show="255" mode="0" />
+            <Curve classid="Curve" name="mu4" link="2015124476" color="0" bold="0" show="255" mode="0" />
+            <Curve classid="Curve" name="mu5" link="384969257" color="0" bold="0" show="255" mode="0" />
+            <Curve classid="Curve" name="mu6" link="1709311162" color="0" bold="0" show="255" mode="0" />
           </Graph>
         </Frame>
         <Frame classid="GraphFrame" name="frame" x="4158" y="684" w="576" h="288" id="371039840" link="-1">
@@ -26154,14 +26154,14 @@
               <param name="ymin" value="-1" />
               <param name="ymax" value="1" />
             </paramlist>
-            <Curve classid="Curve" name="" link="868333679" color="0" bold="0" show="255" mode="0" />
-            <Curve classid="Curve" name="" link="1234134367" color="0" bold="0" show="255" mode="0" />
-            <Curve classid="Curve" name="" link="359594615" color="0" bold="0" show="255" mode="0" />
-            <Curve classid="Curve" name="" link="1201216351" color="0" bold="0" show="255" mode="0" />
-            <Curve classid="Curve" name="" link="1627827565" color="0" bold="0" show="255" mode="0" />
-            <Curve classid="Curve" name="" link="1796253186" color="0" bold="0" show="255" mode="0" />
-            <Curve classid="Curve" name="" link="1357190733" color="0" bold="0" show="255" mode="0" />
-            <Curve classid="Curve" name="" link="1418458495" color="0" bold="0" show="255" mode="0" />
+            <Curve classid="Curve" name="PDG1" link="868333679" color="0" bold="0" show="255" mode="0" />
+            <Curve classid="Curve" name="PDG2" link="1234134367" color="0" bold="0" show="255" mode="0" />
+            <Curve classid="Curve" name="PDG3" link="359594615" color="0" bold="0" show="255" mode="0" />
+            <Curve classid="Curve" name="PDG4" link="1201216351" color="0" bold="0" show="255" mode="0" />
+            <Curve classid="Curve" name="PDG5" link="1627827565" color="0" bold="0" show="255" mode="0" />
+            <Curve classid="Curve" name="PDG6" link="1796253186" color="0" bold="0" show="255" mode="0" />
+            <Curve classid="Curve" name="Pdr1" link="1357190733" color="0" bold="0" show="255" mode="0" />
+            <Curve classid="Curve" name="Pdr2" link="1418458495" color="0" bold="0" show="255" mode="0" />
           </Graph>
         </Frame>
         <Frame classid="GraphFrame" name="frame" x="4734" y="108" w="576" h="288" id="421437933" link="-1">
@@ -26216,7 +26216,7 @@
             </paramlist>
           </Graph>
         </Frame>
-        <User classid="UserCmp" name="droopIIPffP_1_test:DG_PQ" id="1559083760" x="504" y="180" w="128" h="118" z="5940" orient="0" defn="Zhaojian_case1:DG_PQ" link="-1">
+        <User classid="UserCmp" name="droopIIPffP_1_test:DG_PQ" id="1559083760" x="504" y="180" w="128" h="118" z="5940" orient="0" defn="Zhaojian_case:DG_PQ" link="-1">
           <paramlist link="-1" name="">
             <param name="Name" value="" />
           </paramlist>
@@ -26297,7 +26297,7 @@
           <vertex x="0" y="0" />
           <vertex x="0" y="-36" />
         </Wire>
-        <User classid="UserCmp" name="droopIIPffP_1_test:Droop1" id="1281370153" x="738" y="720" w="125" h="114" z="5960" orient="0" defn="Zhaojian_case1:Droop1" link="-1">
+        <User classid="UserCmp" name="droopIIPffP_1_test:Droop1" id="1281370153" x="738" y="720" w="125" h="114" z="5960" orient="0" defn="Zhaojian_case:Droop1" link="-1">
           <paramlist link="-1" name="">
             <param name="Name" value="" />
           </paramlist>
@@ -26374,7 +26374,7 @@
           <vertex x="0" y="0" />
           <vertex x="-90" y="0" />
         </Wire>
-        <User classid="UserCmp" name="async2:PQ_DG2" id="1277207700" x="1890" y="162" w="128" h="114" z="4870" orient="0" defn="Zhaojian_case1:PQ_DG2" link="-1">
+        <User classid="UserCmp" name="async2:PQ_DG2" id="1277207700" x="1890" y="162" w="128" h="114" z="4870" orient="0" defn="Zhaojian_case:PQ_DG2" link="-1">
           <paramlist link="-1" name="">
             <param name="Name" value="" />
           </paramlist>
@@ -26675,7 +26675,7 @@
           <vertex x="0" y="0" />
           <vertex x="0" y="-54" />
         </Wire>
-        <User classid="UserCmp" name="async2:DG3" id="363056874" x="1782" y="1350" w="128" h="111" z="5690" orient="0" defn="Zhaojian_case1:DG3" link="-1">
+        <User classid="UserCmp" name="async2:DG3" id="363056874" x="1782" y="1350" w="128" h="111" z="5690" orient="0" defn="Zhaojian_case:DG3" link="-1">
           <paramlist link="-1" name="">
             <param name="Name" value="" />
           </paramlist>
@@ -26848,7 +26848,7 @@
           <vertex x="0" y="0" />
           <vertex x="0" y="72" />
         </Wire>
-        <User classid="UserCmp" name="async2:DG4" id="1303916965" x="1170" y="1422" w="128" h="112" z="2280" orient="4" defn="Zhaojian_case1:DG4" link="-1">
+        <User classid="UserCmp" name="async2:DG4" id="1303916965" x="1170" y="1422" w="128" h="112" z="2280" orient="4" defn="Zhaojian_case:DG4" link="-1">
           <paramlist link="-1" name="">
             <param name="Name" value="" />
           </paramlist>
@@ -26984,7 +26984,7 @@
           <vertex x="0" y="0" />
           <vertex x="36" y="0" />
         </Wire>
-        <User classid="UserCmp" name="async2:DG5" id="1638738591" x="2214" y="414" w="128" h="112" z="5490" orient="0" defn="Zhaojian_case1:DG5" link="-1">
+        <User classid="UserCmp" name="async2:DG5" id="1638738591" x="2214" y="414" w="128" h="112" z="5490" orient="0" defn="Zhaojian_case:DG5" link="-1">
           <paramlist link="-1" name="">
             <param name="Name" value="" />
           </paramlist>
@@ -27132,7 +27132,7 @@
           <vertex x="0" y="0" />
           <vertex x="0" y="-36" />
         </Wire>
-        <User classid="UserCmp" name="async2:DG6" id="1233590824" x="576" y="504" w="128" h="113" z="3460" orient="0" defn="Zhaojian_case1:DG6" link="-1">
+        <User classid="UserCmp" name="async2:DG6" id="1233590824" x="576" y="504" w="128" h="113" z="3460" orient="0" defn="Zhaojian_case:DG6" link="-1">
           <paramlist link="-1" name="">
             <param name="Name" value="" />
           </paramlist>
@@ -32740,7 +32740,7 @@
             <param name="Value" value="1.0" />
           </paramlist>
         </User>
-        <User classid="UserCmp" name="async2:Droop2" id="199565641" x="1836" y="1026" w="125" h="113" z="5950" orient="0" defn="Zhaojian_case1:Droop2" link="-1">
+        <User classid="UserCmp" name="async2:Droop2" id="199565641" x="1836" y="1026" w="125" h="113" z="5950" orient="0" defn="Zhaojian_case:Droop2" link="-1">
           <paramlist link="-1" name="">
             <param name="Name" value="" />
           </paramlist>
