@@ -1,0 +1,3066 @@
+<project name="Control_Unit_2" version="4.5.0" schema="0" Target="EMTDC">
+  <paramlist name="Settings">
+    <param name="creator" value="76074,1538900158" />
+    <param name="time_duration" value="1" />
+    <param name="time_step" value="10" />
+    <param name="sample_step" value="10" />
+    <param name="chatter_threshold" value=".001" />
+    <param name="branch_threshold" value=".0005" />
+    <param name="StartType" value="0" />
+    <param name="PlotType" value="0" />
+    <param name="output_filename" value="noname.out" />
+    <param name="SnapType" value="0" />
+    <param name="SnapTime" value="0.3" />
+    <param name="snapshot_filename" value="noname.snp" />
+    <param name="MrunType" value="0" />
+    <param name="Mruns" value="10" />
+    <param name="Scenario" value="" />
+    <param name="Advanced" value="10239" />
+    <param name="Options" value="16" />
+    <param name="Build" value="18" />
+    <param name="Warn" value="0" />
+    <param name="Check" value="0" />
+    <param name="description" value="" />
+    <param name="revisor" value="Dean, 1538998359" />
+    <param name="startup_filename" value="" />
+  </paramlist>
+  <paramlist name="Validation" />
+  <hierarchy>
+    <call name="Station" link="19114739" z="0" instance="-1" view="false">
+      <call name="Main" link="467703687" z="0" view="true" instance="0" />
+    </call>
+  </hierarchy>
+  <definitions>
+    <Definition classid="StationDefn" name="Station" group="" url="" version="" build="" crc="10108655" instances="1" key="" view="false">
+      <paramlist name="">
+        <param name="Description" value="" />
+      </paramlist>
+      <schematic classid="StationCanvas">
+        <paramlist>
+          <param name="show_grid" value="0" />
+          <param name="size" value="0" />
+          <param name="orient" value="1" />
+          <param name="show_border" value="0" />
+          <param name="bus_expand_x" value="8" />
+          <param name="bus_expand_y" value="8" />
+          <param name="bus_length" value="4" />
+        </paramlist>
+        <Wire classid="WireBranch" name="Control_Unit_2:Main" x="180" y="180" w="62" h="80" orient="0" defn="Control_Unit_2:Main" id="467703687" recv="-1" send="-1" back="-1">
+          <vertex x="0" y="0" />
+          <vertex x="0" y="18" />
+          <vertex x="54" y="54" />
+          <vertex x="54" y="72" />
+          <User classid="UserCmp" name="Control_Unit_2:Main" id="467703687" x="0" y="0" w="0" h="0" z="-1" orient="0" defn="Control_Unit_2:Main" link="467703687">
+            <paramlist link="-1" name="">
+              <param name="initflag" value="0" />
+              <param name="F" value="1000 [Hz]" />
+              <param name="delayflag" value="0.0001" />
+              <param name="delaylmd" value="0.002" />
+              <param name="Pstart" value="1" />
+              <param name="initlmd" value="0" />
+              <param name="PF" value="20 [Hz]" />
+            </paramlist>
+            <paramlist link="2082946348" name="">
+              <param name="xmin" value="0" />
+              <param name="xmax" value="0.6" />
+            </paramlist>
+            <paramlist link="607772390" name="">
+              <param name="ymin" value="0" />
+              <param name="ymax" value="1" />
+            </paramlist>
+            <paramlist link="1942223697" name="">
+              <param name="xmin" value="0" />
+              <param name="xmax" value="0.6" />
+            </paramlist>
+            <paramlist link="135610216" name="">
+              <param name="ymin" value="0" />
+              <param name="ymax" value="1" />
+            </paramlist>
+            <paramlist link="814861923" name="">
+              <param name="xmin" value="0.4" />
+              <param name="xmax" value="0.41" />
+            </paramlist>
+            <paramlist link="827359807" name="">
+              <param name="ymin" value="-0.1" />
+              <param name="ymax" value="1.1" />
+            </paramlist>
+            <paramlist link="1750747202" name="">
+              <param name="xmin" value="0" />
+              <param name="xmax" value="1" />
+            </paramlist>
+            <paramlist link="257950992" name="">
+              <param name="ymin" value="0" />
+              <param name="ymax" value="0.1" />
+            </paramlist>
+            <paramlist link="1010643098" name="">
+              <param name="xmin" value="0" />
+              <param name="xmax" value="0.16" />
+            </paramlist>
+            <paramlist link="1526450761" name="">
+              <param name="ymin" value="0" />
+              <param name="ymax" value="1" />
+            </paramlist>
+            <paramlist link="2063207597" name="">
+              <param name="xmin" value="0.4" />
+              <param name="xmax" value="0.41" />
+            </paramlist>
+            <paramlist link="803075896" name="">
+              <param name="ymin" value="0" />
+              <param name="ymax" value="0.16" />
+            </paramlist>
+            <paramlist link="861239593" name="">
+              <param name="xmin" value="0" />
+              <param name="xmax" value="1" />
+            </paramlist>
+            <paramlist link="1148365960" name="">
+              <param name="ymin" value="0" />
+              <param name="ymax" value="0.06" />
+            </paramlist>
+          </User>
+        </Wire>
+      </schematic>
+    </Definition>
+    <Definition classid="UserCmpDefn" name="Main" group="" url="" version="" build="" crc="53191726" instances="1" key="" view="false" date="1538978193">
+      <paramlist name="">
+        <param name="Description" value="" />
+      </paramlist>
+      <form name="" w="320" h="400" splitter="60">
+        <category name="Global Substitutions" visible="true">
+          <cond />
+          <parameter desc="delaylmd" name="delaylmd" group="" unit="" min="-1e+308" max="+1e+308" content_type="Literal" type="Real" helpmode="Append" intent="Input">
+            <value><![CDATA[0.001]]></value>
+            <cond />
+            <help />
+          </parameter>
+          <parameter desc="delayflag" name="delayflag" group="" unit="" min="-1e+308" max="+1e+308" content_type="Literal" type="Real" helpmode="Append" intent="Input">
+            <value><![CDATA[0.0001]]></value>
+            <cond />
+            <help />
+          </parameter>
+          <parameter desc="PF" name="PF" group="" unit="" min="-1e+308" max="+1e+308" content_type="Literal" type="Real" helpmode="Append" intent="Input">
+            <value><![CDATA[20 [Hz]]]></value>
+            <cond>
+            </cond>
+            <help>
+            </help>
+          </parameter>
+          <parameter desc="Pstart" name="Pstart" group="" unit="" min="-1e+308" max="+1e+308" content_type="Literal" type="Real" helpmode="Append" intent="Input">
+            <value><![CDATA[1]]></value>
+            <cond />
+            <help />
+          </parameter>
+          <parameter desc="F" name="F" group="" unit="" min="-1e+308" max="+1e+308" content_type="Literal" type="Real" helpmode="Append" intent="Input">
+            <value><![CDATA[1000 [Hz]]]></value>
+            <cond />
+            <help />
+          </parameter>
+        </category>
+      </form>
+      <svg viewBox="-200 -200 200 200">
+        <rect x="-36" y="-36" width="72" height="72" stroke="Black" stroke-dasharray="none" stroke-width="0.2" fill-style="Hollow" fill-fg="" fill-bg="" />
+        <text x="0" y="0" stroke="Black" fill="Black" font-size="Small"><![CDATA[%:Name]]></text>
+      </svg>
+      <schematic classid="UserCanvas">
+        <paramlist>
+          <param name="show_grid" value="0" />
+          <param name="size" value="4" />
+          <param name="orient" value="1" />
+          <param name="show_border" value="0" />
+          <param name="monitor_bus_voltage" value="0" />
+          <param name="show_signal" value="0" />
+          <param name="show_virtual" value="0" />
+          <param name="show_sequence" value="0" />
+          <param name="auto_sequence" value="1" />
+        </paramlist>
+        <User classid="UserCmp" name="master:datalabel" id="1423017973" x="2142" y="1836" w="14" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="z1" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="823977994" x="2142" y="1890" w="14" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="z2" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="1115724394" x="2142" y="1944" w="14" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="z4" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="52334288" x="2142" y="1998" w="14" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="z5" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" defn="master:gain" id="484288624" x="2178" y="1836" w="74" h="32" z="510" orient="0" link="-1">
+          <paramlist link="-1" name="">
+            <param name="G" value="0.25" />
+            <param name="COM" value="Gain" />
+            <param name="Dim" value="1" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" defn="master:gain" id="1769860439" x="2178" y="1890" w="74" h="32" z="610" orient="0" link="-1">
+          <paramlist link="-1" name="">
+            <param name="G" value="0.25" />
+            <param name="COM" value="Gain" />
+            <param name="Dim" value="1" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" defn="master:gain" id="1988357181" x="2178" y="1944" w="74" h="32" z="520" orient="0" link="-1">
+          <paramlist link="-1" name="">
+            <param name="G" value="0.25" />
+            <param name="COM" value="Gain" />
+            <param name="Dim" value="1" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" defn="master:gain" id="986803401" x="2178" y="1998" w="74" h="32" z="570" orient="0" link="-1">
+          <paramlist link="-1" name="">
+            <param name="G" value="0.25" />
+            <param name="COM" value="Gain" />
+            <param name="Dim" value="1" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" defn="master:sumjct" id="1988488512" x="2322" y="1890" w="74" h="77" z="620" orient="0" link="-1">
+          <paramlist link="-1" name="">
+            <param name="DPath" value="1" />
+            <param name="A" value="0" />
+            <param name="B" value="0" />
+            <param name="C" value="1" />
+            <param name="D" value="1" />
+            <param name="E" value="1" />
+            <param name="F" value="1" />
+            <param name="G" value="0" />
+          </paramlist>
+        </User>
+        <Wire classid="WireOrthogonal" name="" x="2214" y="1836" w="80" h="26" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="72" y="0" />
+          <vertex x="72" y="18" />
+        </Wire>
+        <Wire classid="WireOrthogonal" name="" x="2214" y="1890" w="80" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="72" y="0" />
+        </Wire>
+        <Wire classid="WireOrthogonal" name="" x="2214" y="1944" w="80" h="26" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="72" y="0" />
+          <vertex x="72" y="-18" />
+        </Wire>
+        <Wire classid="WireOrthogonal" name="" x="2214" y="1998" w="116" h="80" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="108" y="0" />
+          <vertex x="108" y="-72" />
+        </Wire>
+        <User classid="UserCmp" name="master:const" id="1722651900" x="1890" y="1962" w="67" h="17" z="140" orient="0" defn="master:const" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="" />
+            <param name="Value" value="0" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:const" id="676430166" x="1926" y="1980" w="67" h="17" z="150" orient="0" defn="master:const" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="" />
+            <param name="Value" value="0.05" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:const" id="916077266" x="1890" y="1854" w="67" h="17" z="130" orient="0" defn="master:const" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="" />
+            <param name="Value" value="0.4" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:const" id="492554845" x="1926" y="1836" w="67" h="17" z="120" orient="0" defn="master:const" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="" />
+            <param name="Value" value="0.01" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="syf_lib:fx" id="489309276" x="1944" y="1908" w="116" h="134" z="670" orient="0" defn="syf_lib:fx" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="" />
+          </paramlist>
+        </User>
+        <Wire classid="WireOrthogonal" name="" x="1854" y="1908" w="44" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="36" y="0" />
+        </Wire>
+        <User classid="UserCmp" name="master:datalabel" id="338748072" x="2034" y="1908" w="14" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="x1" />
+          </paramlist>
+        </User>
+        <Wire classid="WireOrthogonal" name="" x="1998" y="1908" w="44" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="36" y="0" />
+        </Wire>
+        <User classid="UserCmp" name="master:datalabel" id="98717599" x="2430" y="1926" w="14" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="z1" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:const" id="1483772781" x="2628" y="1962" w="67" h="17" z="170" orient="0" defn="master:const" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="" />
+            <param name="Value" value="0" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="348591178" x="2628" y="1872" w="14" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="x1" />
+          </paramlist>
+        </User>
+        <Wire classid="WireOrthogonal" name="" x="2628" y="1872" w="44" h="26" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="36" y="0" />
+          <vertex x="36" y="18" />
+        </Wire>
+        <User classid="UserCmp" defn="master:time-sig" id="43978979" x="2592" y="1926" w="67" h="17" z="160" orient="0" link="-1">
+          <paramlist link="-1" name="" />
+        </User>
+        <User classid="UserCmp" name="master:datalabel" defn="master:datalabel" id="2133844822" x="2700" y="1926" w="30" h="20" z="1" orient="2" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="Pref1" />
+          </paramlist>
+        </User>
+        <Wire classid="WireOrthogonal" name="" x="1962" y="1836" w="8" h="26" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="0" y="18" />
+        </Wire>
+        <Wire classid="WireOrthogonal" name="" x="1962" y="1962" w="8" h="26" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="0" y="18" />
+        </Wire>
+        <User classid="UserCmp" name="master:datalabel" id="192003697" x="1854" y="2682" w="22" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="lmd" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:const" id="911152102" x="1890" y="2736" w="67" h="17" z="320" orient="0" defn="master:const" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="" />
+            <param name="Value" value="0" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:const" id="688204826" x="1926" y="2754" w="67" h="17" z="330" orient="0" defn="master:const" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="" />
+            <param name="Value" value="0.055" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:const" id="1099154163" x="1890" y="2628" w="67" h="17" z="310" orient="0" defn="master:const" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="" />
+            <param name="Value" value="0.375" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:const" id="3135993" x="1926" y="2610" w="67" h="17" z="300" orient="0" defn="master:const" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="" />
+            <param name="Value" value="0.012" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="syf_lib:fx" id="2045995177" x="1944" y="2682" w="116" h="134" z="680" orient="0" defn="syf_lib:fx" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="" />
+          </paramlist>
+        </User>
+        <Wire classid="WireOrthogonal" name="" x="1854" y="2682" w="44" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="36" y="0" />
+        </Wire>
+        <User classid="UserCmp" name="master:datalabel" id="666114807" x="2034" y="2682" w="14" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="x4" />
+          </paramlist>
+        </User>
+        <Wire classid="WireOrthogonal" name="" x="1998" y="2682" w="44" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="36" y="0" />
+        </Wire>
+        <Wire classid="WireOrthogonal" name="" x="1962" y="2610" w="8" h="26" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="0" y="18" />
+        </Wire>
+        <Wire classid="WireOrthogonal" name="" x="1962" y="2736" w="8" h="26" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="0" y="18" />
+        </Wire>
+        <Wire classid="WireOrthogonal" name="" x="1962" y="3276" w="8" h="26" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="0" y="18" />
+        </Wire>
+        <Wire classid="WireOrthogonal" name="" x="1962" y="3150" w="8" h="26" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="0" y="18" />
+        </Wire>
+        <Wire classid="WireOrthogonal" name="" x="1998" y="3222" w="44" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="36" y="0" />
+        </Wire>
+        <User classid="UserCmp" name="master:datalabel" id="854004109" x="2034" y="3222" w="14" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="x6" />
+          </paramlist>
+        </User>
+        <Wire classid="WireOrthogonal" name="" x="1854" y="3222" w="44" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="36" y="0" />
+        </Wire>
+        <User classid="UserCmp" name="syf_lib:fx" id="708693543" x="1944" y="3222" w="116" h="134" z="690" orient="0" defn="syf_lib:fx" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:const" id="11082467" x="1926" y="3150" w="67" h="17" z="420" orient="0" defn="master:const" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="" />
+            <param name="Value" value="0.01" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:const" id="1223854730" x="1890" y="3168" w="67" h="17" z="430" orient="0" defn="master:const" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="" />
+            <param name="Value" value="0.45" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:const" id="749731154" x="1926" y="3294" w="67" h="17" z="450" orient="0" defn="master:const" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="" />
+            <param name="Value" value="0.05" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:const" id="223980393" x="1890" y="3276" w="67" h="17" z="440" orient="0" defn="master:const" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="" />
+            <param name="Value" value="0" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="1037692238" x="1854" y="3222" w="22" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="lmd" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" defn="master:select" id="2102587807" x="2394" y="1926" w="77" h="86" z="730" orient="0" link="-1">
+          <paramlist link="-1" name="">
+            <param name="A" value="1" />
+            <param name="DPath" value="1" />
+            <param name="COM" value="Selector" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="646682760" x="2358" y="1926" w="14" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="x1" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="97179688" x="2394" y="1962" w="36" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="Signal" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="70351060" x="2142" y="2628" w="14" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="z1" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="1209423601" x="2142" y="2682" w="14" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="z4" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="63296236" x="2142" y="2736" w="14" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="z3" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" defn="master:gain" id="239189304" x="2178" y="2628" w="74" h="32" z="550" orient="0" link="-1">
+          <paramlist link="-1" name="">
+            <param name="G" value="0.25" />
+            <param name="COM" value="Gain" />
+            <param name="Dim" value="1" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" defn="master:gain" id="890175691" x="2178" y="2682" w="74" h="32" z="530" orient="0" link="-1">
+          <paramlist link="-1" name="">
+            <param name="G" value="0.41667" />
+            <param name="COM" value="Gain" />
+            <param name="Dim" value="1" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" defn="master:gain" id="1942817168" x="2178" y="2736" w="74" h="32" z="540" orient="0" link="-1">
+          <paramlist link="-1" name="">
+            <param name="G" value="0.33333" />
+            <param name="COM" value="Gain" />
+            <param name="Dim" value="1" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" defn="master:sumjct" id="2098731506" x="2322" y="2682" w="74" h="77" z="560" orient="0" link="-1">
+          <paramlist link="-1" name="">
+            <param name="DPath" value="1" />
+            <param name="A" value="0" />
+            <param name="B" value="0" />
+            <param name="C" value="1" />
+            <param name="D" value="1" />
+            <param name="E" value="1" />
+            <param name="F" value="0" />
+            <param name="G" value="0" />
+          </paramlist>
+        </User>
+        <Wire classid="WireOrthogonal" name="" x="2214" y="2628" w="80" h="26" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="72" y="0" />
+          <vertex x="72" y="18" />
+        </Wire>
+        <Wire classid="WireOrthogonal" name="" x="2214" y="2682" w="80" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="72" y="0" />
+        </Wire>
+        <Wire classid="WireOrthogonal" name="" x="2214" y="2736" w="80" h="26" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="72" y="0" />
+          <vertex x="72" y="-18" />
+        </Wire>
+        <User classid="UserCmp" name="master:datalabel" id="1020440320" x="2430" y="2718" w="14" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="z4" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" defn="master:select" id="220080658" x="2394" y="2718" w="77" h="86" z="760" orient="0" link="-1">
+          <paramlist link="-1" name="">
+            <param name="A" value="1" />
+            <param name="DPath" value="1" />
+            <param name="COM" value="Selector" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="443529264" x="2358" y="2718" w="14" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="x4" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="2033488319" x="2394" y="2754" w="36" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="Signal" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="1707453410" x="2142" y="3168" w="14" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="z2" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="1876992057" x="2142" y="3222" w="14" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="z6" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="1794440477" x="2142" y="3276" w="14" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="z5" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" defn="master:gain" id="1498888615" x="2178" y="3168" w="74" h="32" z="630" orient="0" link="-1">
+          <paramlist link="-1" name="">
+            <param name="G" value="0.25" />
+            <param name="COM" value="Gain" />
+            <param name="Dim" value="1" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" defn="master:gain" id="894492188" x="2178" y="3222" w="74" h="32" z="580" orient="0" link="-1">
+          <paramlist link="-1" name="">
+            <param name="G" value="0.41667" />
+            <param name="COM" value="Gain" />
+            <param name="Dim" value="1" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" defn="master:gain" id="1402742285" x="2178" y="3276" w="74" h="32" z="1060" orient="0" link="-1">
+          <paramlist link="-1" name="">
+            <param name="G" value="0.33333" />
+            <param name="COM" value="Gain" />
+            <param name="Dim" value="1" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" defn="master:sumjct" id="833753573" x="2322" y="3222" w="74" h="77" z="1070" orient="0" link="-1">
+          <paramlist link="-1" name="">
+            <param name="DPath" value="1" />
+            <param name="A" value="0" />
+            <param name="B" value="0" />
+            <param name="C" value="1" />
+            <param name="D" value="1" />
+            <param name="E" value="1" />
+            <param name="F" value="0" />
+            <param name="G" value="0" />
+          </paramlist>
+        </User>
+        <Wire classid="WireOrthogonal" name="" x="2214" y="3168" w="80" h="26" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="72" y="0" />
+          <vertex x="72" y="18" />
+        </Wire>
+        <Wire classid="WireOrthogonal" name="" x="2214" y="3222" w="80" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="72" y="0" />
+        </Wire>
+        <Wire classid="WireOrthogonal" name="" x="2214" y="3276" w="80" h="26" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="72" y="0" />
+          <vertex x="72" y="-18" />
+        </Wire>
+        <User classid="UserCmp" name="master:datalabel" id="1269214180" x="2430" y="3258" w="14" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="z6" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" defn="master:select" id="2120955674" x="2394" y="3258" w="77" h="86" z="1080" orient="0" link="-1">
+          <paramlist link="-1" name="">
+            <param name="A" value="1" />
+            <param name="DPath" value="1" />
+            <param name="COM" value="Selector" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="1413065127" x="2358" y="3258" w="14" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="x6" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="2091750516" x="2394" y="3294" w="36" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="Signal" />
+          </paramlist>
+        </User>
+        <Wire classid="WireOrthogonal" name="" x="1962" y="3006" w="8" h="26" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="0" y="18" />
+        </Wire>
+        <Wire classid="WireOrthogonal" name="" x="1962" y="2880" w="8" h="26" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="0" y="18" />
+        </Wire>
+        <Wire classid="WireOrthogonal" name="" x="1998" y="2952" w="44" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="36" y="0" />
+        </Wire>
+        <User classid="UserCmp" name="master:datalabel" id="164180313" x="2034" y="2952" w="14" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="x5" />
+          </paramlist>
+        </User>
+        <Wire classid="WireOrthogonal" name="" x="1854" y="2952" w="44" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="36" y="0" />
+        </Wire>
+        <User classid="UserCmp" name="syf_lib:fx" id="2114349396" x="1944" y="2952" w="116" h="134" z="700" orient="0" defn="syf_lib:fx" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:const" id="1043728690" x="1926" y="2880" w="67" h="17" z="360" orient="0" defn="master:const" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="" />
+            <param name="Value" value="0.01" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:const" id="2114987646" x="1890" y="2898" w="67" h="17" z="370" orient="0" defn="master:const" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="" />
+            <param name="Value" value="0.45" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:const" id="1712740257" x="1926" y="3024" w="67" h="17" z="390" orient="0" defn="master:const" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="" />
+            <param name="Value" value="0.05" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:const" id="1882974637" x="1890" y="3006" w="67" h="17" z="380" orient="0" defn="master:const" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="" />
+            <param name="Value" value="0" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="1273243311" x="1854" y="2952" w="22" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="lmd" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="483693931" x="2142" y="2898" w="14" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="z1" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="1785637407" x="2142" y="2952" w="14" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="z5" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="1230534445" x="2142" y="3006" w="14" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="z6" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" defn="master:gain" id="29439299" x="2178" y="2898" w="74" h="32" z="600" orient="0" link="-1">
+          <paramlist link="-1" name="">
+            <param name="G" value="0.25" />
+            <param name="COM" value="Gain" />
+            <param name="Dim" value="1" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" defn="master:gain" id="535192309" x="2178" y="2952" w="74" h="32" z="830" orient="0" link="-1">
+          <paramlist link="-1" name="">
+            <param name="G" value="0.41667" />
+            <param name="COM" value="Gain" />
+            <param name="Dim" value="1" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" defn="master:gain" id="1233394551" x="2178" y="3006" w="74" h="32" z="590" orient="0" link="-1">
+          <paramlist link="-1" name="">
+            <param name="G" value="0.33333" />
+            <param name="COM" value="Gain" />
+            <param name="Dim" value="1" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" defn="master:sumjct" id="2019391515" x="2322" y="2952" w="74" h="77" z="840" orient="0" link="-1">
+          <paramlist link="-1" name="">
+            <param name="DPath" value="1" />
+            <param name="A" value="0" />
+            <param name="B" value="0" />
+            <param name="C" value="1" />
+            <param name="D" value="1" />
+            <param name="E" value="1" />
+            <param name="F" value="0" />
+            <param name="G" value="0" />
+          </paramlist>
+        </User>
+        <Wire classid="WireOrthogonal" name="" x="2214" y="2898" w="80" h="26" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="72" y="0" />
+          <vertex x="72" y="18" />
+        </Wire>
+        <Wire classid="WireOrthogonal" name="" x="2214" y="2952" w="80" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="72" y="0" />
+        </Wire>
+        <Wire classid="WireOrthogonal" name="" x="2214" y="3006" w="80" h="26" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="72" y="0" />
+          <vertex x="72" y="-18" />
+        </Wire>
+        <User classid="UserCmp" name="master:datalabel" id="1558425124" x="2430" y="2988" w="14" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="z5" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" defn="master:select" id="1784565117" x="2394" y="2988" w="77" h="86" z="1050" orient="0" link="-1">
+          <paramlist link="-1" name="">
+            <param name="A" value="1" />
+            <param name="DPath" value="1" />
+            <param name="COM" value="Selector" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="1742871880" x="2358" y="2988" w="14" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="x5" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="603428066" x="2394" y="3024" w="36" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="Signal" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="1579193634" x="2232" y="774" w="28" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="flag2" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="1358301455" x="2232" y="630" w="28" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="flag1" />
+          </paramlist>
+        </User>
+        <Wire classid="WireOrthogonal" name="" x="2178" y="738" w="26" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="18" y="0" />
+        </Wire>
+        <Wire classid="WireOrthogonal" name="" x="2268" y="738" w="98" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="90" y="0" />
+        </Wire>
+        <Wire classid="WireOrthogonal" name="" x="2178" y="594" w="26" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="18" y="0" />
+        </Wire>
+        <Wire classid="WireOrthogonal" name="" x="2268" y="594" w="62" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="54" y="0" />
+        </Wire>
+        <Wire classid="WireOrthogonal" name="" x="2178" y="702" w="26" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="18" y="0" />
+        </Wire>
+        <Wire classid="WireOrthogonal" name="" x="2178" y="558" w="26" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="18" y="0" />
+        </Wire>
+        <Wire classid="WireOrthogonal" name="" x="2322" y="594" w="44" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="36" y="0" />
+        </Wire>
+        <User classid="UserCmp" name="master:datalabel" id="1265343473" x="2178" y="702" w="44" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="lmdmin" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" defn="master:select" id="1287908973" x="2394" y="774" w="77" h="86" z="990" orient="0" link="-1">
+          <paramlist link="-1" name="">
+            <param name="A" value="1" />
+            <param name="DPath" value="1" />
+            <param name="COM" value="Selector" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" defn="master:select" id="470083916" x="2394" y="630" w="77" h="86" z="950" orient="0" link="-1">
+          <paramlist link="-1" name="">
+            <param name="A" value="1" />
+            <param name="DPath" value="1" />
+            <param name="COM" value="Selector" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="305800278" x="2178" y="558" w="44" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="lmdMax" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:const" id="407959224" x="2322" y="630" w="67" h="17" z="10" orient="0" defn="master:const" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="" />
+            <param name="Value" value="0.15" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:const" id="2057596590" x="2322" y="774" w="67" h="17" z="20" orient="0" defn="master:const" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="" />
+            <param name="Value" value="0" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="1615455393" x="2430" y="630" w="44" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="lmdMax" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="509023130" x="2178" y="594" w="50" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="lmdtemp" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" defn="master:select" id="263580175" x="2232" y="594" w="77" h="86" z="1020" orient="0" link="-1">
+          <paramlist link="-1" name="">
+            <param name="A" value="1" />
+            <param name="DPath" value="1" />
+            <param name="COM" value="Selector" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="1503197039" x="2430" y="774" w="44" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="lmdmin" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="195630245" x="2178" y="738" w="50" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="lmdtemp" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" defn="master:select" id="1933689704" x="2232" y="738" w="77" h="86" z="980" orient="0" link="-1">
+          <paramlist link="-1" name="">
+            <param name="A" value="1" />
+            <param name="DPath" value="1" />
+            <param name="COM" value="Selector" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="1823233651" x="1998" y="918" w="36" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="Signal" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="641182436" x="1890" y="936" w="50" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="lmdtemp" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="1939483340" x="1890" y="900" w="22" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="lmd" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="2034812046" x="2214" y="954" w="50" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="lmdtemp" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="1189208197" x="2070" y="918" w="22" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="lmd" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="309064417" x="2556" y="954" w="22" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="lmd" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="506169638" x="2340" y="990" w="44" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="lmdmin" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="327937864" x="2340" y="918" w="44" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="lmdMax" />
+          </paramlist>
+        </User>
+        <Wire classid="WireOrthogonal" name="" x="2520" y="954" w="44" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="36" y="0" />
+        </Wire>
+        <User classid="UserCmp" defn="master:gain" id="1258266599" x="2484" y="954" w="74" h="32" z="1010" orient="0" link="-1">
+          <paramlist link="-1" name="">
+            <param name="G" value="0.5" />
+            <param name="COM" value="Gain" />
+            <param name="Dim" value="1" />
+          </paramlist>
+        </User>
+        <Wire classid="WireOrthogonal" name="" x="2340" y="990" w="44" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="36" y="0" />
+        </Wire>
+        <Wire classid="WireOrthogonal" name="" x="2340" y="918" w="44" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="36" y="0" />
+        </Wire>
+        <User classid="UserCmp" defn="master:sumjct" id="850975611" x="2412" y="954" w="74" h="77" z="1000" orient="0" link="-1">
+          <paramlist link="-1" name="">
+            <param name="DPath" value="1" />
+            <param name="A" value="0" />
+            <param name="B" value="0" />
+            <param name="C" value="1" />
+            <param name="D" value="0" />
+            <param name="E" value="1" />
+            <param name="F" value="0" />
+            <param name="G" value="0" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="694373170" x="1854" y="1908" w="22" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="lmd" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="676957746" x="2394" y="2232" w="36" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="Signal" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="1575188709" x="2358" y="2196" w="14" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="x2" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" defn="master:select" id="1349112182" x="2394" y="2196" w="77" h="86" z="1040" orient="0" link="-1">
+          <paramlist link="-1" name="">
+            <param name="A" value="1" />
+            <param name="DPath" value="1" />
+            <param name="COM" value="Selector" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="1750029412" x="2430" y="2196" w="14" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="z2" />
+          </paramlist>
+        </User>
+        <Wire classid="WireOrthogonal" name="" x="2214" y="2268" w="116" h="80" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="108" y="0" />
+          <vertex x="108" y="-72" />
+        </Wire>
+        <Wire classid="WireOrthogonal" name="" x="2214" y="2214" w="80" h="26" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="72" y="0" />
+          <vertex x="72" y="-18" />
+        </Wire>
+        <Wire classid="WireOrthogonal" name="" x="2214" y="2160" w="80" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="72" y="0" />
+        </Wire>
+        <Wire classid="WireOrthogonal" name="" x="2214" y="2106" w="80" h="26" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="72" y="0" />
+          <vertex x="72" y="18" />
+        </Wire>
+        <User classid="UserCmp" defn="master:sumjct" id="1969904781" x="2322" y="2160" w="74" h="77" z="810" orient="0" link="-1">
+          <paramlist link="-1" name="">
+            <param name="DPath" value="1" />
+            <param name="A" value="0" />
+            <param name="B" value="0" />
+            <param name="C" value="1" />
+            <param name="D" value="1" />
+            <param name="E" value="1" />
+            <param name="F" value="1" />
+            <param name="G" value="0" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" defn="master:gain" id="42590073" x="2178" y="2268" w="74" h="32" z="800" orient="0" link="-1">
+          <paramlist link="-1" name="">
+            <param name="G" value="0.25" />
+            <param name="COM" value="Gain" />
+            <param name="Dim" value="1" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" defn="master:gain" id="1599906003" x="2178" y="2214" w="74" h="32" z="650" orient="0" link="-1">
+          <paramlist link="-1" name="">
+            <param name="G" value="0.25" />
+            <param name="COM" value="Gain" />
+            <param name="Dim" value="1" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" defn="master:gain" id="2140494184" x="2178" y="2160" w="74" h="32" z="640" orient="0" link="-1">
+          <paramlist link="-1" name="">
+            <param name="G" value="0.25" />
+            <param name="COM" value="Gain" />
+            <param name="Dim" value="1" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" defn="master:gain" id="655265503" x="2178" y="2106" w="74" h="32" z="740" orient="0" link="-1">
+          <paramlist link="-1" name="">
+            <param name="G" value="0.25" />
+            <param name="COM" value="Gain" />
+            <param name="Dim" value="1" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="651553103" x="2142" y="2268" w="14" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="z6" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="723261743" x="2142" y="2214" w="14" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="z3" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="1968746191" x="2142" y="2160" w="14" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="z2" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="1098343984" x="2142" y="2106" w="14" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="z1" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:const" id="248331800" x="1890" y="2250" w="67" h="17" z="200" orient="0" defn="master:const" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="" />
+            <param name="Value" value="0" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:const" id="126202644" x="1926" y="2268" w="67" h="17" z="220" orient="0" defn="master:const" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="" />
+            <param name="Value" value="0.055" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:const" id="360416679" x="1890" y="2142" w="67" h="17" z="190" orient="0" defn="master:const" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="" />
+            <param name="Value" value="0.5" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:const" id="883066843" x="1926" y="2124" w="67" h="17" z="180" orient="0" defn="master:const" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="" />
+            <param name="Value" value="0.01" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="syf_lib:fx" id="1953368609" x="1944" y="2196" w="116" h="134" z="710" orient="0" defn="syf_lib:fx" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="" />
+          </paramlist>
+        </User>
+        <Wire classid="WireOrthogonal" name="" x="1854" y="2196" w="44" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="36" y="0" />
+        </Wire>
+        <User classid="UserCmp" name="master:datalabel" id="958375318" x="2034" y="2196" w="14" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="x2" />
+          </paramlist>
+        </User>
+        <Wire classid="WireOrthogonal" name="" x="1998" y="2196" w="44" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="36" y="0" />
+        </Wire>
+        <Wire classid="WireOrthogonal" name="" x="1962" y="2124" w="8" h="26" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="0" y="18" />
+        </Wire>
+        <Wire classid="WireOrthogonal" name="" x="1962" y="2250" w="8" h="26" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="0" y="18" />
+        </Wire>
+        <User classid="UserCmp" name="master:datalabel" id="1200891989" x="1854" y="2196" w="22" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="lmd" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:const" id="184823591" x="2628" y="2232" w="67" h="17" z="230" orient="0" defn="master:const" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="" />
+            <param name="Value" value="0" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="1333485289" x="2628" y="2142" w="14" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="x2" />
+          </paramlist>
+        </User>
+        <Wire classid="WireOrthogonal" name="" x="2628" y="2142" w="44" h="26" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="36" y="0" />
+          <vertex x="36" y="18" />
+        </Wire>
+        <User classid="UserCmp" defn="master:time-sig" id="1537059113" x="2592" y="2196" w="67" h="17" z="210" orient="0" link="-1">
+          <paramlist link="-1" name="" />
+        </User>
+        <User classid="UserCmp" name="master:datalabel" defn="master:datalabel" id="281006582" x="2700" y="2196" w="30" h="20" z="1" orient="2" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="Pref2" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="1193401640" x="2142" y="2376" w="14" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="z2" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="525642373" x="2142" y="2430" w="14" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="z3" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="1645063015" x="2142" y="2484" w="14" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="z4" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" defn="master:gain" id="319571756" x="2178" y="2376" w="74" h="32" z="1090" orient="0" link="-1">
+          <paramlist link="-1" name="">
+            <param name="G" value="0.25" />
+            <param name="COM" value="Gain" />
+            <param name="Dim" value="1" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" defn="master:gain" id="2018447619" x="2178" y="2430" w="74" h="32" z="660" orient="0" link="-1">
+          <paramlist link="-1" name="">
+            <param name="G" value="0.41667" />
+            <param name="COM" value="Gain" />
+            <param name="Dim" value="1" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" defn="master:gain" id="805388533" x="2178" y="2484" w="74" h="32" z="780" orient="0" link="-1">
+          <paramlist link="-1" name="">
+            <param name="G" value="0.33333" />
+            <param name="COM" value="Gain" />
+            <param name="Dim" value="1" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" defn="master:sumjct" id="271443315" x="2322" y="2430" w="74" h="77" z="1100" orient="0" link="-1">
+          <paramlist link="-1" name="">
+            <param name="DPath" value="1" />
+            <param name="A" value="0" />
+            <param name="B" value="0" />
+            <param name="C" value="1" />
+            <param name="D" value="1" />
+            <param name="E" value="1" />
+            <param name="F" value="0" />
+            <param name="G" value="0" />
+          </paramlist>
+        </User>
+        <Wire classid="WireOrthogonal" name="" x="2214" y="2376" w="80" h="26" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="72" y="0" />
+          <vertex x="72" y="18" />
+        </Wire>
+        <Wire classid="WireOrthogonal" name="" x="2214" y="2430" w="80" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="72" y="0" />
+        </Wire>
+        <Wire classid="WireOrthogonal" name="" x="2214" y="2484" w="80" h="26" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="72" y="0" />
+          <vertex x="72" y="-18" />
+        </Wire>
+        <User classid="UserCmp" name="master:datalabel" id="1159477717" x="2430" y="2466" w="14" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="z3" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" defn="master:select" id="1961061822" x="2394" y="2466" w="77" h="86" z="1110" orient="0" link="-1">
+          <paramlist link="-1" name="">
+            <param name="A" value="1" />
+            <param name="DPath" value="1" />
+            <param name="COM" value="Selector" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="1519555456" x="2358" y="2466" w="14" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="x3" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="1090323432" x="2394" y="2502" w="36" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="Signal" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="607657176" x="1854" y="2430" w="22" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="lmd" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:const" id="996171801" x="1890" y="2484" w="67" h="17" z="260" orient="0" defn="master:const" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="" />
+            <param name="Value" value="0" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:const" id="30544777" x="1926" y="2502" w="67" h="17" z="270" orient="0" defn="master:const" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="" />
+            <param name="Value" value="0.06" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:const" id="804030002" x="1890" y="2376" w="67" h="17" z="250" orient="0" defn="master:const" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="" />
+            <param name="Value" value="0.325" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:const" id="959495064" x="1926" y="2358" w="67" h="17" z="240" orient="0" defn="master:const" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="" />
+            <param name="Value" value="0.014" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="syf_lib:fx" id="931784102" x="1944" y="2430" w="116" h="134" z="720" orient="0" defn="syf_lib:fx" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="" />
+          </paramlist>
+        </User>
+        <Wire classid="WireOrthogonal" name="" x="1854" y="2430" w="44" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="36" y="0" />
+        </Wire>
+        <User classid="UserCmp" name="master:datalabel" id="1064875174" x="2034" y="2430" w="14" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="x3" />
+          </paramlist>
+        </User>
+        <Wire classid="WireOrthogonal" name="" x="1998" y="2430" w="44" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="36" y="0" />
+        </Wire>
+        <Wire classid="WireOrthogonal" name="" x="1962" y="2358" w="8" h="26" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="0" y="18" />
+        </Wire>
+        <Wire classid="WireOrthogonal" name="" x="1962" y="2484" w="8" h="26" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="0" y="18" />
+        </Wire>
+        <User classid="UserCmp" name="master:const" id="40706033" x="2646" y="2502" w="67" h="17" z="290" orient="0" defn="master:const" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="" />
+            <param name="Value" value="0" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="773648849" x="2646" y="2412" w="14" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="x3" />
+          </paramlist>
+        </User>
+        <Wire classid="WireOrthogonal" name="" x="2646" y="2412" w="44" h="26" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="36" y="0" />
+          <vertex x="36" y="18" />
+        </Wire>
+        <User classid="UserCmp" defn="master:time-sig" id="87303162" x="2610" y="2466" w="67" h="17" z="280" orient="0" link="-1">
+          <paramlist link="-1" name="" />
+        </User>
+        <User classid="UserCmp" name="master:datalabel" defn="master:datalabel" id="721778321" x="2718" y="2466" w="30" h="20" z="1" orient="2" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="Pref3" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:const" id="1967561743" x="2646" y="2754" w="67" h="17" z="350" orient="0" defn="master:const" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="" />
+            <param name="Value" value="0" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="587659478" x="2646" y="2664" w="14" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="x4" />
+          </paramlist>
+        </User>
+        <Wire classid="WireOrthogonal" name="" x="2646" y="2664" w="44" h="26" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="36" y="0" />
+          <vertex x="36" y="18" />
+        </Wire>
+        <User classid="UserCmp" defn="master:time-sig" id="1457033250" x="2610" y="2718" w="67" h="17" z="340" orient="0" link="-1">
+          <paramlist link="-1" name="" />
+        </User>
+        <User classid="UserCmp" name="master:datalabel" defn="master:datalabel" id="210493161" x="2718" y="2718" w="30" h="20" z="1" orient="2" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="Pref4" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:const" id="148464621" x="2646" y="3024" w="67" h="17" z="410" orient="0" defn="master:const" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="" />
+            <param name="Value" value="0" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="1729125331" x="2646" y="2934" w="14" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="x5" />
+          </paramlist>
+        </User>
+        <Wire classid="WireOrthogonal" name="" x="2646" y="2934" w="44" h="26" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="36" y="0" />
+          <vertex x="36" y="18" />
+        </Wire>
+        <User classid="UserCmp" defn="master:time-sig" id="184116259" x="2610" y="2988" w="67" h="17" z="400" orient="0" link="-1">
+          <paramlist link="-1" name="" />
+        </User>
+        <User classid="UserCmp" name="master:datalabel" defn="master:datalabel" id="2060763529" x="2718" y="2988" w="30" h="20" z="1" orient="2" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="Pref5" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:const" id="1880085001" x="2646" y="3294" w="67" h="17" z="470" orient="0" defn="master:const" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="" />
+            <param name="Value" value="0" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="729318434" x="2646" y="3204" w="14" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="x6" />
+          </paramlist>
+        </User>
+        <Wire classid="WireOrthogonal" name="" x="2646" y="3204" w="44" h="26" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="36" y="0" />
+          <vertex x="36" y="18" />
+        </Wire>
+        <User classid="UserCmp" defn="master:time-sig" id="365379868" x="2610" y="3258" w="67" h="17" z="460" orient="0" link="-1">
+          <paramlist link="-1" name="" />
+        </User>
+        <User classid="UserCmp" name="master:datalabel" defn="master:datalabel" id="1185580669" x="2718" y="3258" w="30" h="20" z="1" orient="2" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="Pref6" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="214899244" x="1854" y="1242" w="14" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="z1" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="627961628" x="1854" y="1278" w="8" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="y" />
+          </paramlist>
+        </User>
+        <Wire classid="WireOrthogonal" name="" x="1854" y="1242" w="26" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="18" y="0" />
+        </Wire>
+        <Wire classid="WireOrthogonal" name="" x="1854" y="1278" w="26" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="18" y="0" />
+        </Wire>
+        <User classid="UserCmp" name="master:datalabel" id="1901641981" x="1944" y="1242" w="22" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="cp1" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="229517853" x="1854" y="1314" w="14" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="z2" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="794220470" x="1854" y="1350" w="8" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="y" />
+          </paramlist>
+        </User>
+        <Wire classid="WireOrthogonal" name="" x="1854" y="1314" w="26" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="18" y="0" />
+        </Wire>
+        <Wire classid="WireOrthogonal" name="" x="1854" y="1350" w="26" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="18" y="0" />
+        </Wire>
+        <User classid="UserCmp" name="master:datalabel" id="810162459" x="1944" y="1314" w="22" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="cp2" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="2016004167" x="1854" y="1386" w="14" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="z3" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="1126352632" x="1854" y="1422" w="8" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="y" />
+          </paramlist>
+        </User>
+        <Wire classid="WireOrthogonal" name="" x="1854" y="1386" w="26" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="18" y="0" />
+        </Wire>
+        <Wire classid="WireOrthogonal" name="" x="1854" y="1422" w="26" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="18" y="0" />
+        </Wire>
+        <User classid="UserCmp" name="master:datalabel" id="90747945" x="1944" y="1386" w="22" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="cp3" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="481312351" x="1854" y="1458" w="14" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="z4" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="858320524" x="1854" y="1494" w="8" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="y" />
+          </paramlist>
+        </User>
+        <Wire classid="WireOrthogonal" name="" x="1854" y="1458" w="26" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="18" y="0" />
+        </Wire>
+        <Wire classid="WireOrthogonal" name="" x="1854" y="1494" w="26" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="18" y="0" />
+        </Wire>
+        <User classid="UserCmp" name="master:datalabel" id="28482794" x="1944" y="1458" w="22" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="cp4" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="1530244486" x="1854" y="1530" w="14" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="z5" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="1499595114" x="1854" y="1566" w="8" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="y" />
+          </paramlist>
+        </User>
+        <Wire classid="WireOrthogonal" name="" x="1854" y="1530" w="26" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="18" y="0" />
+        </Wire>
+        <Wire classid="WireOrthogonal" name="" x="1854" y="1566" w="26" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="18" y="0" />
+        </Wire>
+        <User classid="UserCmp" name="master:datalabel" id="594034557" x="1944" y="1530" w="22" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="cp5" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="977123633" x="1854" y="1602" w="14" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="z6" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="1883087807" x="1854" y="1638" w="8" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="y" />
+          </paramlist>
+        </User>
+        <Wire classid="WireOrthogonal" name="" x="1854" y="1602" w="26" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="18" y="0" />
+        </Wire>
+        <Wire classid="WireOrthogonal" name="" x="1854" y="1638" w="26" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="18" y="0" />
+        </Wire>
+        <User classid="UserCmp" name="master:datalabel" id="1114299523" x="1944" y="1602" w="22" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="cp6" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" defn="master:logic_mult" id="431229716" x="2142" y="1278" w="74" h="104" z="900" orient="0" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Type" value="0" />
+            <param name="Num_in" value="6" />
+            <param name="Inv" value="1" />
+            <param name="disnum" value="0" />
+            <param name="INTR" value="0" />
+            <param name="Inv1" value="0" />
+            <param name="Inv2" value="0" />
+            <param name="Inv3" value="0" />
+            <param name="Inv4" value="0" />
+            <param name="Inv5" value="0" />
+            <param name="Inv6" value="0" />
+            <param name="Inv7" value="0" />
+            <param name="Inv8" value="0" />
+            <param name="Inv9" value="0" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="2126029288" x="2106" y="1224" w="22" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="cp1" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="1359496430" x="2106" y="1242" w="22" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="cp2" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="1288905237" x="2106" y="1260" w="22" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="cp3" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="355339704" x="2106" y="1278" w="22" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="cp4" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="864819044" x="2106" y="1296" w="22" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="cp5" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="1483815728" x="2106" y="1314" w="22" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="cp6" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="512608955" x="2592" y="1242" w="28" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="flag1" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" defn="master:logic_mult" id="1437568037" x="2142" y="1476" w="74" h="104" z="870" orient="0" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Type" value="1" />
+            <param name="Num_in" value="6" />
+            <param name="Inv" value="0" />
+            <param name="disnum" value="0" />
+            <param name="INTR" value="0" />
+            <param name="Inv1" value="0" />
+            <param name="Inv2" value="0" />
+            <param name="Inv3" value="0" />
+            <param name="Inv4" value="0" />
+            <param name="Inv5" value="0" />
+            <param name="Inv6" value="0" />
+            <param name="Inv7" value="0" />
+            <param name="Inv8" value="0" />
+            <param name="Inv9" value="0" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="1968377817" x="2592" y="1530" w="28" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="flag2" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="503727259" x="2106" y="1422" w="22" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="cp1" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="1158085594" x="2106" y="1440" w="22" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="cp2" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="1128760842" x="2106" y="1458" w="22" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="cp3" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="1113771210" x="2106" y="1476" w="22" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="cp4" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="2065530496" x="2106" y="1494" w="22" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="cp5" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="276964563" x="2106" y="1512" w="22" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="cp6" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" defn="master:compar" id="963047152" x="1872" y="1242" w="79" h="60" z="750" orient="0" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Pulse" value="0" />
+            <param name="INTR" value="0" />
+            <param name="OPos" value="1" />
+            <param name="ONone" value="0" />
+            <param name="ONeg" value="1" />
+            <param name="OHi" value="1" />
+            <param name="OLo" value="0" />
+            <param name="conv" value="0" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" defn="master:compar" id="1600333729" x="1872" y="1314" w="79" h="60" z="860" orient="0" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Pulse" value="0" />
+            <param name="INTR" value="0" />
+            <param name="OPos" value="1" />
+            <param name="ONone" value="0" />
+            <param name="ONeg" value="1" />
+            <param name="OHi" value="1" />
+            <param name="OLo" value="0" />
+            <param name="conv" value="0" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" defn="master:compar" id="91580519" x="1872" y="1386" w="79" h="60" z="790" orient="0" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Pulse" value="0" />
+            <param name="INTR" value="0" />
+            <param name="OPos" value="1" />
+            <param name="ONone" value="0" />
+            <param name="ONeg" value="1" />
+            <param name="OHi" value="1" />
+            <param name="OLo" value="0" />
+            <param name="conv" value="0" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" defn="master:compar" id="1774866980" x="1872" y="1458" w="79" h="60" z="770" orient="0" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Pulse" value="0" />
+            <param name="INTR" value="0" />
+            <param name="OPos" value="1" />
+            <param name="ONone" value="0" />
+            <param name="ONeg" value="1" />
+            <param name="OHi" value="1" />
+            <param name="OLo" value="0" />
+            <param name="conv" value="0" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" defn="master:compar" id="1126786741" x="1872" y="1530" w="79" h="60" z="850" orient="0" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Pulse" value="0" />
+            <param name="INTR" value="0" />
+            <param name="OPos" value="1" />
+            <param name="ONone" value="0" />
+            <param name="ONeg" value="1" />
+            <param name="OHi" value="1" />
+            <param name="OLo" value="0" />
+            <param name="conv" value="0" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" defn="master:compar" id="1353043459" x="1872" y="1602" w="79" h="60" z="820" orient="0" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Pulse" value="0" />
+            <param name="INTR" value="0" />
+            <param name="OPos" value="1" />
+            <param name="ONone" value="0" />
+            <param name="ONeg" value="1" />
+            <param name="OHi" value="1" />
+            <param name="OLo" value="0" />
+            <param name="conv" value="0" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:consti" id="864355261" x="2178" y="1314" w="67" h="17" z="80" orient="0" defn="master:consti" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="" />
+            <param name="Value" value="1" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:consti" id="764967985" x="2178" y="1512" w="67" h="17" z="110" orient="0" defn="master:consti" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="" />
+            <param name="Value" value="1" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="405551043" x="2286" y="1314" w="64" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="flag1_temp" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" defn="master:logic_mult" id="666519109" x="2556" y="1242" w="74" h="50" z="940" orient="0" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Type" value="1" />
+            <param name="Num_in" value="3" />
+            <param name="Inv" value="0" />
+            <param name="disnum" value="0" />
+            <param name="INTR" value="0" />
+            <param name="Inv1" value="0" />
+            <param name="Inv2" value="0" />
+            <param name="Inv3" value="0" />
+            <param name="Inv4" value="0" />
+            <param name="Inv5" value="0" />
+            <param name="Inv6" value="0" />
+            <param name="Inv7" value="0" />
+            <param name="Inv8" value="0" />
+            <param name="Inv9" value="0" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="769475400" x="2520" y="1260" w="64" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="flag1_temp" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="2094871526" x="2286" y="1512" w="64" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="flag2_temp" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="1740585347" x="2520" y="1548" w="64" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="flag2_temp" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" defn="master:logic_mult" id="1925338350" x="2556" y="1530" w="74" h="50" z="920" orient="0" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Type" value="1" />
+            <param name="Num_in" value="3" />
+            <param name="Inv" value="0" />
+            <param name="disnum" value="0" />
+            <param name="INTR" value="0" />
+            <param name="Inv1" value="0" />
+            <param name="Inv2" value="0" />
+            <param name="Inv3" value="0" />
+            <param name="Inv4" value="0" />
+            <param name="Inv5" value="0" />
+            <param name="Inv6" value="0" />
+            <param name="Inv7" value="0" />
+            <param name="Inv8" value="0" />
+            <param name="Inv9" value="0" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:const" id="1274013575" x="2502" y="1422" w="67" h="17" z="100" orient="0" defn="master:const" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="" />
+            <param name="Value" value="1.0" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:sumjct" defn="master:sumjct" id="709033078" x="2538" y="1386" w="74" h="59" z="490" orient="0" link="-1">
+          <paramlist link="-1" name="">
+            <param name="DPath" value="1" />
+            <param name="A" value="0" />
+            <param name="B" value="0" />
+            <param name="C" value="0" />
+            <param name="D" value="-1" />
+            <param name="E" value="0" />
+            <param name="F" value="1" />
+            <param name="G" value="0" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="386832638" x="2574" y="1386" w="16" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="clk" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="262869702" x="2520" y="1224" w="16" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="clk" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="2121746855" x="2520" y="1512" w="16" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="clk" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="1351984351" x="1944" y="1134" w="8" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="y" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="1278982430" x="2736" y="1170" w="14" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="z1" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="1918023468" x="2736" y="1206" w="14" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="z2" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="1720583336" x="2736" y="1242" w="14" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="z3" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="1468519345" x="2736" y="1278" w="14" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="z4" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="978550845" x="2736" y="1314" w="14" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="z5" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="1190981482" x="2736" y="1350" w="14" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="z6" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="1245943090" x="2736" y="1386" w="8" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="y" />
+          </paramlist>
+        </User>
+        <Line classid="Divider" name="" x="1404" y="1062" w="1656" h="0" orient="2">
+          <paramlist>
+            <param name="state" value="0" />
+            <param name="color" value="9" />
+            <param name="style" value=" 1" />
+            <param name="weight" value=" 2" />
+          </paramlist>
+        </Line>
+        <Line classid="Divider" name="" x="1404" y="1746" w="1656" h="0" orient="2">
+          <paramlist>
+            <param name="state" value="0" />
+            <param name="color" value="9" />
+            <param name="style" value=" 1" />
+            <param name="weight" value=" 2" />
+          </paramlist>
+        </Line>
+        <User classid="UserCmp" name="master:pgb" id="1456373082" x="2736" y="1170" w="36" h="37" z="1430" orient="0" defn="master:pgb" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="z1" />
+            <param name="Group" value="" />
+            <param name="Display" value="1" />
+            <param name="Scale" value="1.0" />
+            <param name="Units" value="" />
+            <param name="mrun" value="0" />
+            <param name="Pol" value="0" />
+            <param name="Max" value="2.0" />
+            <param name="Min" value="-2.0" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:pgb" id="957703155" x="2736" y="1206" w="36" h="37" z="1410" orient="0" defn="master:pgb" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="z2" />
+            <param name="Group" value="" />
+            <param name="Display" value="1" />
+            <param name="Scale" value="1.0" />
+            <param name="Units" value="" />
+            <param name="mrun" value="0" />
+            <param name="Pol" value="0" />
+            <param name="Max" value="2.0" />
+            <param name="Min" value="-2.0" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:pgb" id="2045859527" x="2736" y="1242" w="36" h="37" z="1390" orient="0" defn="master:pgb" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="z3" />
+            <param name="Group" value="" />
+            <param name="Display" value="1" />
+            <param name="Scale" value="1.0" />
+            <param name="Units" value="" />
+            <param name="mrun" value="0" />
+            <param name="Pol" value="0" />
+            <param name="Max" value="2.0" />
+            <param name="Min" value="-2.0" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:pgb" id="1923916173" x="2736" y="1278" w="36" h="37" z="1370" orient="0" defn="master:pgb" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="z4" />
+            <param name="Group" value="" />
+            <param name="Display" value="1" />
+            <param name="Scale" value="1.0" />
+            <param name="Units" value="" />
+            <param name="mrun" value="0" />
+            <param name="Pol" value="0" />
+            <param name="Max" value="2.0" />
+            <param name="Min" value="-2.0" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:pgb" id="112957185" x="2736" y="1314" w="36" h="37" z="1350" orient="0" defn="master:pgb" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="z5" />
+            <param name="Group" value="" />
+            <param name="Display" value="1" />
+            <param name="Scale" value="1.0" />
+            <param name="Units" value="" />
+            <param name="mrun" value="0" />
+            <param name="Pol" value="0" />
+            <param name="Max" value="2.0" />
+            <param name="Min" value="-2.0" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:pgb" id="1244437322" x="2736" y="1350" w="36" h="37" z="1330" orient="0" defn="master:pgb" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="z6" />
+            <param name="Group" value="" />
+            <param name="Display" value="1" />
+            <param name="Scale" value="1.0" />
+            <param name="Units" value="" />
+            <param name="mrun" value="0" />
+            <param name="Pol" value="0" />
+            <param name="Max" value="2.0" />
+            <param name="Min" value="-2.0" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:pgb" id="1044352853" x="2736" y="1386" w="36" h="37" z="1310" orient="0" defn="master:pgb" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="y" />
+            <param name="Group" value="" />
+            <param name="Display" value="1" />
+            <param name="Scale" value="1.0" />
+            <param name="Units" value="" />
+            <param name="mrun" value="0" />
+            <param name="Pol" value="0" />
+            <param name="Max" value="2.0" />
+            <param name="Min" value="-2.0" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="1061355057" x="2808" y="1170" w="22" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="cp1" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="1676525859" x="2808" y="1206" w="22" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="cp2" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="1991818450" x="2808" y="1242" w="22" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="cp3" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="1265181366" x="2808" y="1278" w="22" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="cp4" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="1650154895" x="2808" y="1314" w="22" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="cp5" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="429111324" x="2808" y="1350" w="22" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="cp6" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:pgb" id="1955047813" x="2808" y="1170" w="36" h="37" z="1420" orient="0" defn="master:pgb" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="cp1" />
+            <param name="Group" value="" />
+            <param name="Display" value="1" />
+            <param name="Scale" value="1.0" />
+            <param name="Units" value="" />
+            <param name="mrun" value="0" />
+            <param name="Pol" value="0" />
+            <param name="Max" value="2.0" />
+            <param name="Min" value="-2.0" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:pgb" id="229986820" x="2808" y="1206" w="36" h="37" z="1400" orient="0" defn="master:pgb" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="cp2" />
+            <param name="Group" value="" />
+            <param name="Display" value="1" />
+            <param name="Scale" value="1.0" />
+            <param name="Units" value="" />
+            <param name="mrun" value="0" />
+            <param name="Pol" value="0" />
+            <param name="Max" value="2.0" />
+            <param name="Min" value="-2.0" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:pgb" id="414502901" x="2808" y="1242" w="36" h="37" z="1380" orient="0" defn="master:pgb" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="cp3" />
+            <param name="Group" value="" />
+            <param name="Display" value="1" />
+            <param name="Scale" value="1.0" />
+            <param name="Units" value="" />
+            <param name="mrun" value="0" />
+            <param name="Pol" value="0" />
+            <param name="Max" value="2.0" />
+            <param name="Min" value="-2.0" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:pgb" id="1744995468" x="2808" y="1278" w="36" h="37" z="1360" orient="0" defn="master:pgb" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="cp4" />
+            <param name="Group" value="" />
+            <param name="Display" value="1" />
+            <param name="Scale" value="1.0" />
+            <param name="Units" value="" />
+            <param name="mrun" value="0" />
+            <param name="Pol" value="0" />
+            <param name="Max" value="2.0" />
+            <param name="Min" value="-2.0" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:pgb" id="1404753642" x="2808" y="1314" w="36" h="37" z="1340" orient="0" defn="master:pgb" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="cp5" />
+            <param name="Group" value="" />
+            <param name="Display" value="1" />
+            <param name="Scale" value="1.0" />
+            <param name="Units" value="" />
+            <param name="mrun" value="0" />
+            <param name="Pol" value="0" />
+            <param name="Max" value="2.0" />
+            <param name="Min" value="-2.0" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:pgb" id="1930644715" x="2808" y="1350" w="36" h="37" z="1320" orient="0" defn="master:pgb" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="cp6" />
+            <param name="Group" value="" />
+            <param name="Display" value="1" />
+            <param name="Scale" value="1.0" />
+            <param name="Units" value="" />
+            <param name="mrun" value="0" />
+            <param name="Pol" value="0" />
+            <param name="Max" value="2.0" />
+            <param name="Min" value="-2.0" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="1667943004" x="2754" y="1458" w="64" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="flag1_temp" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="180793880" x="2754" y="1494" w="64" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="flag2_temp" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="1447293292" x="2754" y="1530" w="28" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="flag1" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="1053084129" x="2754" y="1566" w="28" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="flag2" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:pgb" id="1880357099" x="2808" y="1458" w="74" h="37" z="1300" orient="0" defn="master:pgb" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="flag1_temp" />
+            <param name="Group" value="" />
+            <param name="Display" value="1" />
+            <param name="Scale" value="1.0" />
+            <param name="Units" value="" />
+            <param name="mrun" value="0" />
+            <param name="Pol" value="0" />
+            <param name="Max" value="2.0" />
+            <param name="Min" value="-2.0" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:pgb" id="1444705791" x="2808" y="1494" w="74" h="37" z="1290" orient="0" defn="master:pgb" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="flag2_temp" />
+            <param name="Group" value="" />
+            <param name="Display" value="1" />
+            <param name="Scale" value="1.0" />
+            <param name="Units" value="" />
+            <param name="mrun" value="0" />
+            <param name="Pol" value="0" />
+            <param name="Max" value="2.0" />
+            <param name="Min" value="-2.0" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:pgb" id="1969879125" x="2808" y="1530" w="39" h="37" z="1280" orient="0" defn="master:pgb" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="flag1" />
+            <param name="Group" value="" />
+            <param name="Display" value="1" />
+            <param name="Scale" value="1.0" />
+            <param name="Units" value="" />
+            <param name="mrun" value="0" />
+            <param name="Pol" value="0" />
+            <param name="Max" value="2.0" />
+            <param name="Min" value="-2.0" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:pgb" id="867193363" x="2808" y="1566" w="39" h="37" z="1270" orient="0" defn="master:pgb" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="flag2" />
+            <param name="Group" value="" />
+            <param name="Display" value="1" />
+            <param name="Scale" value="1.0" />
+            <param name="Units" value="" />
+            <param name="mrun" value="0" />
+            <param name="Pol" value="0" />
+            <param name="Max" value="2.0" />
+            <param name="Min" value="-2.0" />
+          </paramlist>
+        </User>
+        <Wire classid="WireOrthogonal" name="" x="2754" y="1458" w="62" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="54" y="0" />
+        </Wire>
+        <Wire classid="WireOrthogonal" name="" x="2754" y="1494" w="62" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="54" y="0" />
+        </Wire>
+        <Wire classid="WireOrthogonal" name="" x="2754" y="1530" w="62" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="54" y="0" />
+        </Wire>
+        <Wire classid="WireOrthogonal" name="" x="2754" y="1566" w="62" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="54" y="0" />
+        </Wire>
+        <User classid="UserCmp" name="master:datalabel" id="814820819" x="2826" y="792" w="22" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="lmd" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="33945863" x="2826" y="720" w="44" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="lmdMax" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="1442133559" x="2826" y="864" w="44" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="lmdmin" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="1015487239" x="2826" y="936" w="50" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="lmdtemp" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:pgb" id="2120381118" x="2862" y="720" w="54" h="37" z="1480" orient="0" defn="master:pgb" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="lmdMax" />
+            <param name="Group" value="" />
+            <param name="Display" value="1" />
+            <param name="Scale" value="1.0" />
+            <param name="Units" value="" />
+            <param name="mrun" value="0" />
+            <param name="Pol" value="0" />
+            <param name="Max" value="2.0" />
+            <param name="Min" value="-2.0" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:pgb" id="36309502" x="2862" y="792" w="36" h="37" z="1470" orient="0" defn="master:pgb" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="lmd" />
+            <param name="Group" value="" />
+            <param name="Display" value="1" />
+            <param name="Scale" value="1.0" />
+            <param name="Units" value="" />
+            <param name="mrun" value="0" />
+            <param name="Pol" value="0" />
+            <param name="Max" value="2.0" />
+            <param name="Min" value="-2.0" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:pgb" id="116004537" x="2862" y="864" w="54" h="37" z="1460" orient="0" defn="master:pgb" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="lmdmin" />
+            <param name="Group" value="" />
+            <param name="Display" value="1" />
+            <param name="Scale" value="1.0" />
+            <param name="Units" value="" />
+            <param name="mrun" value="0" />
+            <param name="Pol" value="0" />
+            <param name="Max" value="2.0" />
+            <param name="Min" value="-2.0" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:pgb" id="1331884648" x="2862" y="936" w="61" h="37" z="1450" orient="0" defn="master:pgb" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="lmdtemp" />
+            <param name="Group" value="" />
+            <param name="Display" value="1" />
+            <param name="Scale" value="1.0" />
+            <param name="Units" value="" />
+            <param name="mrun" value="0" />
+            <param name="Pol" value="0" />
+            <param name="Max" value="2.0" />
+            <param name="Min" value="-2.0" />
+          </paramlist>
+        </User>
+        <Wire classid="WireOrthogonal" name="" x="2826" y="720" w="44" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="36" y="0" />
+        </Wire>
+        <Wire classid="WireOrthogonal" name="" x="2826" y="792" w="44" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="36" y="0" />
+        </Wire>
+        <Wire classid="WireOrthogonal" name="" x="2826" y="864" w="44" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="36" y="0" />
+        </Wire>
+        <Wire classid="WireOrthogonal" name="" x="2826" y="936" w="44" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="36" y="0" />
+        </Wire>
+        <Frame classid="GraphFrame" id="2082946348" name="frame" x="3996" y="918" w="576" h="288" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Icon" value="-1,0" />
+            <param name="state" value="1" />
+            <param name="title" value="$(GROUP) : Graphs" />
+            <param name="XLabel" value="x" />
+            <param name="Pan" value="false,75" />
+            <param name="markers" value="false" />
+            <param name="glyphs" value="false" />
+            <param name="ticks" value="false" />
+            <param name="grid" value="false" />
+            <param name="yinter" value="false" />
+            <param name="xinter" value="false" />
+            <param name="snapaperture" value="false" />
+            <param name="dynaperture" value="true" />
+            <param name="minorgrids" value="false" />
+            <param name="lockmarkers" value="false" />
+            <param name="deltareadout" value="false" />
+            <param name="xmarker" value="0" />
+            <param name="omarker" value="0" />
+          </paramlist>
+          <paramlist link="2082946348" name="">
+            <param name="xmin" value="0.0" />
+            <param name="xmax" value="1.0" />
+          </paramlist>
+          <Graph classid="OverlayGraph" id="607772390" link="-1">
+            <paramlist link="-1" name="">
+              <param name="title" value="" />
+              <param name="units" value="" />
+              <param name="gridvalue" value="0.100000" />
+              <param name="yintervalue" value="0.000000" />
+              <param name="grid" value="false" />
+              <param name="ticks" value="false" />
+              <param name="glyphs" value="false" />
+              <param name="yinter" value="true" />
+              <param name="xinter" value="true" />
+              <param name="marker" value="false" />
+              <param name="trigger" value="false" />
+              <param name="autocolor" value="false" />
+              <param name="invertcolor" value="false" />
+              <param name="crosshair" value="false" />
+              <param name="manualscale" value="false" />
+            </paramlist>
+            <paramlist link="607772390" name="">
+              <param name="ymin" value="-1" />
+              <param name="ymax" value="1" />
+            </paramlist>
+            <Curve classid="Curve" name="cp1" link="1955047813" color="0" bold="0" show="255" mode="0" />
+            <Curve classid="Curve" name="cp2" link="229986820" color="0" bold="0" show="255" mode="0" />
+            <Curve classid="Curve" name="cp3" link="414502901" color="0" bold="0" show="255" mode="0" />
+            <Curve classid="Curve" name="cp4" link="1744995468" color="0" bold="0" show="255" mode="0" />
+            <Curve classid="Curve" name="cp5" link="1404753642" color="0" bold="0" show="255" mode="0" />
+            <Curve classid="Curve" name="cp6" link="1930644715" color="0" bold="0" show="255" mode="0" />
+          </Graph>
+        </Frame>
+        <User classid="UserCmp" name="master:datalabel" id="2091452034" x="2754" y="1602" w="16" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="clk" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:pgb" id="1204599155" x="2808" y="1602" w="36" h="37" z="1260" orient="0" defn="master:pgb" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="clk" />
+            <param name="Group" value="" />
+            <param name="Display" value="1" />
+            <param name="Scale" value="1.0" />
+            <param name="Units" value="" />
+            <param name="mrun" value="0" />
+            <param name="Pol" value="0" />
+            <param name="Max" value="2.0" />
+            <param name="Min" value="-2.0" />
+          </paramlist>
+        </User>
+        <Wire classid="WireOrthogonal" name="" x="2754" y="1602" w="62" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="54" y="0" />
+        </Wire>
+        <User classid="UserCmp" name="master:datalabel" id="572348" x="2430" y="1134" w="64" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="flag1_temp" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="1132184374" x="2430" y="1170" w="64" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="flag2_temp" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="1822059349" x="2502" y="1134" w="64" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="flag1_delay" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="1005370238" x="2502" y="1170" w="64" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="flag2_delay" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="1329281882" x="2520" y="1242" w="64" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="flag1_delay" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="37517801" x="2520" y="1530" w="64" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="flag2_delay" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="1193251369" x="2754" y="1638" w="64" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="flag1_delay" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:pgb" id="2107814238" x="2808" y="1638" w="75" h="37" z="1250" orient="0" defn="master:pgb" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="flag1_delay" />
+            <param name="Group" value="" />
+            <param name="Display" value="1" />
+            <param name="Scale" value="1.0" />
+            <param name="Units" value="" />
+            <param name="mrun" value="0" />
+            <param name="Pol" value="0" />
+            <param name="Max" value="2.0" />
+            <param name="Min" value="-2.0" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="448405103" x="2754" y="1674" w="64" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="flag2_delay" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:pgb" id="384077821" x="2808" y="1674" w="75" h="37" z="1240" orient="0" defn="master:pgb" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="flag2_delay" />
+            <param name="Group" value="" />
+            <param name="Display" value="1" />
+            <param name="Scale" value="1.0" />
+            <param name="Units" value="" />
+            <param name="mrun" value="0" />
+            <param name="Pol" value="0" />
+            <param name="Max" value="2.0" />
+            <param name="Min" value="-2.0" />
+          </paramlist>
+        </User>
+        <Wire classid="WireOrthogonal" name="" x="2754" y="1638" w="62" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="54" y="0" />
+        </Wire>
+        <Wire classid="WireOrthogonal" name="" x="2754" y="1674" w="62" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="54" y="0" />
+        </Wire>
+        <User classid="UserCmp" name="master:datalabel" id="819915179" x="2970" y="1926" w="14" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="x1" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:pgb" id="1484923238" x="2970" y="1926" w="36" h="37" z="1220" orient="0" defn="master:pgb" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="x1" />
+            <param name="Group" value="" />
+            <param name="Display" value="1" />
+            <param name="Scale" value="1.0" />
+            <param name="Units" value="" />
+            <param name="mrun" value="0" />
+            <param name="Pol" value="0" />
+            <param name="Max" value="2.0" />
+            <param name="Min" value="-2.0" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="1613447327" x="2970" y="1962" w="14" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="x2" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:pgb" id="106783346" x="2970" y="1962" w="36" h="37" z="1210" orient="0" defn="master:pgb" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="x2" />
+            <param name="Group" value="" />
+            <param name="Display" value="1" />
+            <param name="Scale" value="1.0" />
+            <param name="Units" value="" />
+            <param name="mrun" value="0" />
+            <param name="Pol" value="0" />
+            <param name="Max" value="2.0" />
+            <param name="Min" value="-2.0" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="830476635" x="2970" y="1998" w="14" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="x3" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:pgb" id="1413887950" x="2970" y="1998" w="36" h="37" z="1200" orient="0" defn="master:pgb" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="x3" />
+            <param name="Group" value="" />
+            <param name="Display" value="1" />
+            <param name="Scale" value="1.0" />
+            <param name="Units" value="" />
+            <param name="mrun" value="0" />
+            <param name="Pol" value="0" />
+            <param name="Max" value="2.0" />
+            <param name="Min" value="-2.0" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="778905537" x="2970" y="2034" w="14" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="x4" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:pgb" id="144014027" x="2970" y="2034" w="36" h="37" z="1190" orient="0" defn="master:pgb" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="x4" />
+            <param name="Group" value="" />
+            <param name="Display" value="1" />
+            <param name="Scale" value="1.0" />
+            <param name="Units" value="" />
+            <param name="mrun" value="0" />
+            <param name="Pol" value="0" />
+            <param name="Max" value="2.0" />
+            <param name="Min" value="-2.0" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="1824357148" x="2970" y="2070" w="14" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="x5" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:pgb" id="828802755" x="2970" y="2070" w="36" h="37" z="1180" orient="0" defn="master:pgb" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="x5" />
+            <param name="Group" value="" />
+            <param name="Display" value="1" />
+            <param name="Scale" value="1.0" />
+            <param name="Units" value="" />
+            <param name="mrun" value="0" />
+            <param name="Pol" value="0" />
+            <param name="Max" value="2.0" />
+            <param name="Min" value="-2.0" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="1306118509" x="2970" y="2106" w="14" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="x6" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:pgb" id="1420371858" x="2970" y="2106" w="36" h="37" z="1170" orient="0" defn="master:pgb" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="x6" />
+            <param name="Group" value="" />
+            <param name="Display" value="1" />
+            <param name="Scale" value="1.0" />
+            <param name="Units" value="" />
+            <param name="mrun" value="0" />
+            <param name="Pol" value="0" />
+            <param name="Max" value="2.0" />
+            <param name="Min" value="-2.0" />
+          </paramlist>
+        </User>
+        <Frame classid="GraphFrame" id="1942223697" name="frame" x="3420" y="1494" w="576" h="288" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Icon" value="-1,0" />
+            <param name="state" value="1" />
+            <param name="title" value="$(GROUP) : Graphs" />
+            <param name="XLabel" value="x" />
+            <param name="Pan" value="false,75" />
+            <param name="markers" value="false" />
+            <param name="glyphs" value="false" />
+            <param name="ticks" value="false" />
+            <param name="grid" value="false" />
+            <param name="yinter" value="false" />
+            <param name="xinter" value="false" />
+            <param name="snapaperture" value="false" />
+            <param name="dynaperture" value="true" />
+            <param name="minorgrids" value="false" />
+            <param name="lockmarkers" value="false" />
+            <param name="deltareadout" value="false" />
+            <param name="xmarker" value="0" />
+            <param name="omarker" value="0" />
+          </paramlist>
+          <paramlist link="1942223697" name="">
+            <param name="xmin" value="0.0" />
+            <param name="xmax" value="1.0" />
+          </paramlist>
+          <Graph classid="OverlayGraph" id="135610216" link="-1">
+            <paramlist link="-1" name="">
+              <param name="title" value="" />
+              <param name="units" value="" />
+              <param name="gridvalue" value="0.100000" />
+              <param name="yintervalue" value="0.000000" />
+              <param name="grid" value="false" />
+              <param name="ticks" value="false" />
+              <param name="glyphs" value="false" />
+              <param name="yinter" value="true" />
+              <param name="xinter" value="true" />
+              <param name="marker" value="false" />
+              <param name="trigger" value="false" />
+              <param name="autocolor" value="false" />
+              <param name="invertcolor" value="false" />
+              <param name="crosshair" value="false" />
+              <param name="manualscale" value="false" />
+            </paramlist>
+            <paramlist link="135610216" name="">
+              <param name="ymin" value="-1" />
+              <param name="ymax" value="1" />
+            </paramlist>
+            <Curve classid="Curve" name="flag1_delay" link="2107814238" color="0" bold="0" show="254" mode="0" />
+            <Curve classid="Curve" name="flag1_temp" link="1880357099" color="0" bold="0" show="254" mode="0" />
+            <Curve classid="Curve" name="flag1" link="1969879125" color="0" bold="0" show="254" mode="0" />
+            <Curve classid="Curve" name="clk" link="1204599155" color="0" bold="0" show="254" mode="0" />
+          </Graph>
+        </Frame>
+        <Frame classid="GraphFrame" id="814861923" name="frame" x="3420" y="1206" w="576" h="288" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Icon" value="-1,0" />
+            <param name="state" value="1" />
+            <param name="title" value="$(GROUP) : Graphs" />
+            <param name="XLabel" value="x" />
+            <param name="Pan" value="false,75" />
+            <param name="markers" value="false" />
+            <param name="glyphs" value="false" />
+            <param name="ticks" value="false" />
+            <param name="grid" value="false" />
+            <param name="yinter" value="false" />
+            <param name="xinter" value="false" />
+            <param name="snapaperture" value="false" />
+            <param name="dynaperture" value="true" />
+            <param name="minorgrids" value="false" />
+            <param name="lockmarkers" value="false" />
+            <param name="deltareadout" value="false" />
+            <param name="xmarker" value="0" />
+            <param name="omarker" value="0" />
+          </paramlist>
+          <paramlist link="814861923" name="">
+            <param name="xmin" value="0.0" />
+            <param name="xmax" value="1.0" />
+          </paramlist>
+          <Graph classid="OverlayGraph" id="827359807" link="-1">
+            <paramlist link="-1" name="">
+              <param name="title" value="" />
+              <param name="units" value="" />
+              <param name="gridvalue" value="0.200000" />
+              <param name="yintervalue" value="0.000000" />
+              <param name="grid" value="false" />
+              <param name="ticks" value="false" />
+              <param name="glyphs" value="false" />
+              <param name="yinter" value="true" />
+              <param name="xinter" value="true" />
+              <param name="marker" value="false" />
+              <param name="trigger" value="false" />
+              <param name="autocolor" value="false" />
+              <param name="invertcolor" value="false" />
+              <param name="crosshair" value="false" />
+              <param name="manualscale" value="false" />
+            </paramlist>
+            <paramlist link="827359807" name="">
+              <param name="ymin" value="-1" />
+              <param name="ymax" value="1" />
+            </paramlist>
+            <Curve classid="Curve" name="flag1_temp" link="1880357099" color="0" bold="0" show="254" mode="0" />
+            <Curve classid="Curve" name="flag2_temp" link="1444705791" color="0" bold="0" show="254" mode="0" />
+            <Curve classid="Curve" name="flag1" link="1969879125" color="0" bold="0" show="255" mode="0" />
+            <Curve classid="Curve" name="flag2" link="867193363" color="0" bold="0" show="255" mode="0" />
+            <Curve classid="Curve" name="clk" link="1204599155" color="0" bold="0" show="254" mode="0" />
+          </Graph>
+        </Frame>
+        <Frame classid="GraphFrame" id="1750747202" name="frame" x="3420" y="918" w="576" h="288" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Icon" value="-1,0" />
+            <param name="state" value="1" />
+            <param name="title" value="$(GROUP) : Graphs" />
+            <param name="XLabel" value="x" />
+            <param name="Pan" value="false,75" />
+            <param name="markers" value="false" />
+            <param name="glyphs" value="false" />
+            <param name="ticks" value="false" />
+            <param name="grid" value="false" />
+            <param name="yinter" value="false" />
+            <param name="xinter" value="false" />
+            <param name="snapaperture" value="false" />
+            <param name="dynaperture" value="false" />
+            <param name="minorgrids" value="false" />
+            <param name="lockmarkers" value="false" />
+            <param name="deltareadout" value="false" />
+            <param name="xmarker" value="0" />
+            <param name="omarker" value="0" />
+          </paramlist>
+          <paramlist link="1750747202" name="">
+            <param name="xmin" value="0.0" />
+            <param name="xmax" value="1.0" />
+          </paramlist>
+          <Graph classid="OverlayGraph" id="257950992" link="-1">
+            <paramlist link="-1" name="">
+              <param name="title" value="" />
+              <param name="units" value="" />
+              <param name="gridvalue" value="0.010000" />
+              <param name="yintervalue" value="0.000000" />
+              <param name="grid" value="false" />
+              <param name="ticks" value="false" />
+              <param name="glyphs" value="false" />
+              <param name="yinter" value="true" />
+              <param name="xinter" value="true" />
+              <param name="marker" value="false" />
+              <param name="trigger" value="false" />
+              <param name="autocolor" value="false" />
+              <param name="invertcolor" value="false" />
+              <param name="crosshair" value="false" />
+              <param name="manualscale" value="false" />
+            </paramlist>
+            <paramlist link="257950992" name="">
+              <param name="ymin" value="-1" />
+              <param name="ymax" value="1" />
+            </paramlist>
+            <Curve classid="Curve" name="z1" link="1456373082" color="0" bold="0" show="255" mode="0" />
+            <Curve classid="Curve" name="z2" link="957703155" color="0" bold="0" show="255" mode="0" />
+            <Curve classid="Curve" name="z3" link="2045859527" color="0" bold="0" show="255" mode="0" />
+            <Curve classid="Curve" name="z4" link="1923916173" color="0" bold="0" show="255" mode="0" />
+            <Curve classid="Curve" name="z5" link="112957185" color="0" bold="0" show="255" mode="0" />
+            <Curve classid="Curve" name="z6" link="1244437322" color="0" bold="0" show="255" mode="0" />
+            <Curve classid="Curve" name="y" link="1044352853" color="0" bold="0" show="255" mode="0" />
+            <Curve classid="Curve" name="" link="695550613" color="0" bold="0" show="254" mode="0" />
+          </Graph>
+        </Frame>
+        <User classid="UserCmp" name="master:datalabel" id="1137080291" x="2826" y="1008" w="36" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="Signal" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:pgb" id="90073566" x="2862" y="1008" w="47" h="37" z="1440" orient="0" defn="master:pgb" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="Signal" />
+            <param name="Group" value="" />
+            <param name="Display" value="1" />
+            <param name="Scale" value="1.0" />
+            <param name="Units" value="" />
+            <param name="mrun" value="0" />
+            <param name="Pol" value="0" />
+            <param name="Max" value="2.0" />
+            <param name="Min" value="-2.0" />
+          </paramlist>
+        </User>
+        <Wire classid="WireOrthogonal" name="" x="2826" y="1008" w="44" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="36" y="0" />
+        </Wire>
+        <Frame classid="GraphFrame" id="1010643098" name="frame" x="3996" y="1494" w="576" h="288" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Icon" value="-1,0" />
+            <param name="state" value="1" />
+            <param name="title" value="$(GROUP) : Graphs" />
+            <param name="XLabel" value="x" />
+            <param name="Pan" value="false,75" />
+            <param name="markers" value="false" />
+            <param name="glyphs" value="false" />
+            <param name="ticks" value="false" />
+            <param name="grid" value="false" />
+            <param name="yinter" value="false" />
+            <param name="xinter" value="false" />
+            <param name="snapaperture" value="false" />
+            <param name="dynaperture" value="true" />
+            <param name="minorgrids" value="false" />
+            <param name="lockmarkers" value="false" />
+            <param name="deltareadout" value="false" />
+            <param name="xmarker" value="0" />
+            <param name="omarker" value="0" />
+          </paramlist>
+          <paramlist link="1010643098" name="">
+            <param name="xmin" value="0.0" />
+            <param name="xmax" value="1.0" />
+          </paramlist>
+          <Graph classid="OverlayGraph" id="1526450761" link="-1">
+            <paramlist link="-1" name="">
+              <param name="title" value="" />
+              <param name="units" value="" />
+              <param name="gridvalue" value="0.100000" />
+              <param name="yintervalue" value="0.000000" />
+              <param name="grid" value="true" />
+              <param name="ticks" value="false" />
+              <param name="glyphs" value="false" />
+              <param name="yinter" value="true" />
+              <param name="xinter" value="true" />
+              <param name="marker" value="false" />
+              <param name="trigger" value="false" />
+              <param name="autocolor" value="false" />
+              <param name="invertcolor" value="false" />
+              <param name="crosshair" value="false" />
+              <param name="manualscale" value="false" />
+            </paramlist>
+            <paramlist link="1526450761" name="">
+              <param name="ymin" value="-1" />
+              <param name="ymax" value="1" />
+            </paramlist>
+            <Curve classid="Curve" name="Signal" link="90073566" color="0" bold="0" show="255" mode="0" />
+          </Graph>
+        </Frame>
+        <Frame classid="GraphFrame" id="2063207597" name="frame" x="3996" y="1206" w="576" h="288" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Icon" value="-1,0" />
+            <param name="state" value="1" />
+            <param name="title" value="$(GROUP) : Graphs" />
+            <param name="XLabel" value="x" />
+            <param name="Pan" value="false,75" />
+            <param name="markers" value="false" />
+            <param name="glyphs" value="false" />
+            <param name="ticks" value="false" />
+            <param name="grid" value="false" />
+            <param name="yinter" value="false" />
+            <param name="xinter" value="false" />
+            <param name="snapaperture" value="false" />
+            <param name="dynaperture" value="true" />
+            <param name="minorgrids" value="false" />
+            <param name="lockmarkers" value="false" />
+            <param name="deltareadout" value="false" />
+            <param name="xmarker" value="0" />
+            <param name="omarker" value="0" />
+          </paramlist>
+          <paramlist link="2063207597" name="">
+            <param name="xmin" value="0.0" />
+            <param name="xmax" value="1.0" />
+          </paramlist>
+          <Graph classid="OverlayGraph" id="803075896" link="-1">
+            <paramlist link="-1" name="">
+              <param name="title" value="" />
+              <param name="units" value="" />
+              <param name="gridvalue" value="0.020000" />
+              <param name="yintervalue" value="0.000000" />
+              <param name="grid" value="false" />
+              <param name="ticks" value="false" />
+              <param name="glyphs" value="false" />
+              <param name="yinter" value="true" />
+              <param name="xinter" value="true" />
+              <param name="marker" value="false" />
+              <param name="trigger" value="false" />
+              <param name="autocolor" value="false" />
+              <param name="invertcolor" value="false" />
+              <param name="crosshair" value="false" />
+              <param name="manualscale" value="false" />
+            </paramlist>
+            <paramlist link="803075896" name="">
+              <param name="ymin" value="-1" />
+              <param name="ymax" value="1" />
+            </paramlist>
+            <Curve classid="Curve" name="lmdMax" link="2120381118" color="0" bold="0" show="255" mode="0" />
+            <Curve classid="Curve" name="lmd" link="36309502" color="0" bold="0" show="255" mode="0" />
+            <Curve classid="Curve" name="lmdmin" link="116004537" color="0" bold="0" show="255" mode="0" />
+            <Curve classid="Curve" name="lmdtemp" link="1331884648" color="0" bold="0" show="254" mode="0" />
+          </Graph>
+        </Frame>
+        <User classid="UserCmp" name="syf_lib:EqualTo" id="571782503" x="1944" y="918" w="122" h="80" z="1030" orient="0" defn="syf_lib:EqualTo" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="" />
+            <param name="delta" value="0.00001" />
+          </paramlist>
+        </User>
+        <Frame classid="GraphFrame" id="861239593" name="frame" x="3420" y="1782" w="576" h="288" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Icon" value="-1,0" />
+            <param name="state" value="1" />
+            <param name="title" value="$(GROUP) : Graphs" />
+            <param name="XLabel" value="x" />
+            <param name="Pan" value="false,75" />
+            <param name="markers" value="false" />
+            <param name="glyphs" value="false" />
+            <param name="ticks" value="false" />
+            <param name="grid" value="false" />
+            <param name="yinter" value="false" />
+            <param name="xinter" value="false" />
+            <param name="snapaperture" value="false" />
+            <param name="dynaperture" value="true" />
+            <param name="minorgrids" value="false" />
+            <param name="lockmarkers" value="false" />
+            <param name="deltareadout" value="false" />
+            <param name="xmarker" value="0" />
+            <param name="omarker" value="0" />
+          </paramlist>
+          <paramlist link="861239593" name="">
+            <param name="xmin" value="0.0" />
+            <param name="xmax" value="1.0" />
+          </paramlist>
+          <Graph classid="OverlayGraph" id="1148365960" link="-1">
+            <paramlist link="-1" name="">
+              <param name="title" value="" />
+              <param name="units" value="" />
+              <param name="gridvalue" value="0.010000" />
+              <param name="yintervalue" value="0.000000" />
+              <param name="grid" value="true" />
+              <param name="ticks" value="false" />
+              <param name="glyphs" value="false" />
+              <param name="yinter" value="true" />
+              <param name="xinter" value="true" />
+              <param name="marker" value="false" />
+              <param name="trigger" value="false" />
+              <param name="autocolor" value="false" />
+              <param name="invertcolor" value="false" />
+              <param name="crosshair" value="false" />
+              <param name="manualscale" value="false" />
+            </paramlist>
+            <paramlist link="1148365960" name="">
+              <param name="ymin" value="-1" />
+              <param name="ymax" value="1" />
+            </paramlist>
+            <Curve classid="Curve" name="x1" link="1484923238" color="0" bold="0" show="255" mode="0" />
+            <Curve classid="Curve" name="x2" link="106783346" color="0" bold="0" show="255" mode="0" />
+            <Curve classid="Curve" name="x3" link="1413887950" color="0" bold="0" show="255" mode="0" />
+            <Curve classid="Curve" name="x4" link="144014027" color="0" bold="0" show="255" mode="0" />
+            <Curve classid="Curve" name="x5" link="828802755" color="0" bold="0" show="255" mode="0" />
+            <Curve classid="Curve" name="x6" link="1420371858" color="0" bold="0" show="255" mode="0" />
+          </Graph>
+        </Frame>
+        <User classid="UserCmp" defn="master:timer" id="870816895" x="2664" y="1926" w="74" h="75" z="1230" orient="6" link="-1">
+          <paramlist link="-1" name="">
+            <param name="FSet" value="$(Pstart)" />
+            <param name="TS" value="0.0 [s]" />
+            <param name="TD" value="0.0 [s]" />
+            <param name="COM" value="Timer" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" defn="master:tdelay" id="1915720663" x="2466" y="1134" w="74" h="32" z="930" orient="0" link="-1">
+          <paramlist link="-1" name="">
+            <param name="T" value="$(delayflag)" />
+            <param name="N" value="100" />
+            <param name="Intp" value="0" />
+            <param name="COM" value="Delay" />
+            <param name="Dim" value="1" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" defn="master:tdelay" id="666788503" x="2106" y="918" w="74" h="32" z="960" orient="0" link="-1">
+          <paramlist link="-1" name="">
+            <param name="T" value="$(delaylmd)" />
+            <param name="N" value="100" />
+            <param name="Intp" value="0" />
+            <param name="COM" value="Delay" />
+            <param name="Dim" value="1" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" defn="master:signalgen" id="2106723745" x="2466" y="1386" w="65" h="56" z="90" orient="0" link="-1">
+          <paramlist link="-1" name="">
+            <param name="F" value="$(F)" />
+            <param name="P" value="0.0 [deg]" />
+            <param name="Type" value="2" />
+            <param name="Duty" value="10 [%]" />
+            <param name="Max" value="1" />
+            <param name="Min" value="0" />
+            <param name="INTR" value="0" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" defn="master:tdelay" id="601683787" x="2466" y="1170" w="74" h="32" z="890" orient="0" link="-1">
+          <paramlist link="-1" name="">
+            <param name="T" value="$(delayflag)" />
+            <param name="N" value="100" />
+            <param name="Intp" value="0" />
+            <param name="COM" value="Delay" />
+            <param name="Dim" value="1" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" defn="master:timer" id="572158390" x="2664" y="2196" w="74" h="75" z="1160" orient="6" link="-1">
+          <paramlist link="-1" name="">
+            <param name="FSet" value="$(Pstart)" />
+            <param name="TS" value="0.0 [s]" />
+            <param name="TD" value="0.0 [s]" />
+            <param name="COM" value="Timer" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" defn="master:timer" id="748971169" x="2682" y="2466" w="74" h="75" z="1150" orient="6" link="-1">
+          <paramlist link="-1" name="">
+            <param name="FSet" value="$(Pstart)" />
+            <param name="TS" value="0.0 [s]" />
+            <param name="TD" value="0.0 [s]" />
+            <param name="COM" value="Timer" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" defn="master:timer" id="1318836823" x="2682" y="2718" w="74" h="75" z="1140" orient="6" link="-1">
+          <paramlist link="-1" name="">
+            <param name="FSet" value="$(Pstart)" />
+            <param name="TS" value="0.0 [s]" />
+            <param name="TD" value="0.0 [s]" />
+            <param name="COM" value="Timer" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" defn="master:timer" id="1556386740" x="2682" y="2988" w="74" h="75" z="1130" orient="6" link="-1">
+          <paramlist link="-1" name="">
+            <param name="FSet" value="$(Pstart)" />
+            <param name="TS" value="0.0 [s]" />
+            <param name="TD" value="0.0 [s]" />
+            <param name="COM" value="Timer" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" defn="master:timer" id="2130107271" x="2682" y="3258" w="74" h="75" z="1120" orient="6" link="-1">
+          <paramlist link="-1" name="">
+            <param name="FSet" value="$(Pstart)" />
+            <param name="TS" value="0.0 [s]" />
+            <param name="TD" value="0.0 [s]" />
+            <param name="COM" value="Timer" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" defn="master:time-sig" id="235017487" x="1764" y="1134" w="67" h="17" z="40" orient="0" link="-1">
+          <paramlist link="-1" name="" />
+        </User>
+        <User classid="UserCmp" defn="master:sandhdefn" id="281199878" x="1908" y="1134" w="74" h="60" z="500" orient="0" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Iand" value="1" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="1450584568" x="1638" y="1242" w="24" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="sclk" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="666509037" x="1908" y="1170" w="24" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="sclk" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" defn="master:select" id="1879606237" x="2250" y="1314" w="77" h="86" z="910" orient="0" link="-1">
+          <paramlist link="-1" name="">
+            <param name="A" value="1" />
+            <param name="DPath" value="1" />
+            <param name="COM" value="Selector" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="1811391963" x="2250" y="1350" w="24" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="sclk" />
+          </paramlist>
+        </User>
+        <Wire classid="WireOrthogonal" name="" x="2178" y="1278" w="44" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="36" y="0" />
+        </Wire>
+        <User classid="UserCmp" defn="master:select" id="288392074" x="2250" y="1512" w="77" h="86" z="880" orient="0" link="-1">
+          <paramlist link="-1" name="">
+            <param name="A" value="1" />
+            <param name="DPath" value="1" />
+            <param name="COM" value="Selector" />
+          </paramlist>
+        </User>
+        <Wire classid="WireOrthogonal" name="" x="2178" y="1476" w="44" h="8" orient="0">
+          <vertex x="0" y="0" />
+          <vertex x="36" y="0" />
+        </Wire>
+        <User classid="UserCmp" name="master:datalabel" id="314204762" x="2250" y="1548" w="24" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="sclk" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="1440295957" x="2394" y="666" w="24" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="sclk" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="1515200664" x="2394" y="810" w="24" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="sclk" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" defn="master:gain" id="1855296531" x="1836" y="1134" w="74" h="32" z="50" orient="0" link="-1">
+          <paramlist link="-1" name="">
+            <param name="G" value="0.1" />
+            <param name="COM" value="Gain" />
+            <param name="Dim" value="1" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" defn="master:select" id="1115110195" x="2178" y="954" w="77" h="86" z="970" orient="0" link="-1">
+          <paramlist link="-1" name="">
+            <param name="A" value="1" />
+            <param name="DPath" value="1" />
+            <param name="COM" value="Selector" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:datalabel" id="2054435956" x="2178" y="990" w="24" h="20" z="1" orient="0" defn="master:datalabel" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="sclk" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:const" id="1880854906" x="2106" y="954" w="67" h="17" z="30" orient="0" defn="master:const" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="" />
+            <param name="Value" value="0" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" defn="master:signalgen" id="1973318650" x="1530" y="1242" w="65" h="56" z="60" orient="0" link="-1">
+          <paramlist link="-1" name="">
+            <param name="F" value="$(PF)" />
+            <param name="P" value="0.0 [deg]" />
+            <param name="Type" value="2" />
+            <param name="Duty" value="4 [%]" />
+            <param name="Max" value="1" />
+            <param name="Min" value="0" />
+            <param name="INTR" value="0" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:const" id="1928112276" x="1566" y="1278" w="67" h="17" z="70" orient="0" defn="master:const" link="-1">
+          <paramlist link="-1" name="">
+            <param name="Name" value="" />
+            <param name="Value" value="1.0" />
+          </paramlist>
+        </User>
+        <User classid="UserCmp" name="master:sumjct" defn="master:sumjct" id="1487882540" x="1602" y="1242" w="74" h="59" z="480" orient="0" link="-1">
+          <paramlist link="-1" name="">
+            <param name="DPath" value="1" />
+            <param name="A" value="0" />
+            <param name="B" value="0" />
+            <param name="C" value="0" />
+            <param name="D" value="-1" />
+            <param name="E" value="0" />
+            <param name="F" value="1" />
+            <param name="G" value="0" />
+          </paramlist>
+        </User>
+      </schematic>
+    </Definition>
+  </definitions>
+  <output name="Control_Unit_2" device="EMTDC" version="2010" date="2018/10/08" time="13:56:34.000000">
+    <paramlist />
+    <domain name="Time" unit="s" mult="0.0" skew="0.0">
+      <sample rate="100000.0" end="100000" />
+    </domain>
+    <analog>
+      <channel index="0" id="1420371858:0" name="x6" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <channel index="1" id="828802755:0" name="x5" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <channel index="2" id="144014027:0" name="x4" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <channel index="3" id="1413887950:0" name="x3" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <channel index="4" id="106783346:0" name="x2" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <channel index="5" id="1484923238:0" name="x1" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <channel index="6" id="384077821:0" name="flag2_delay" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <channel index="7" id="2107814238:0" name="flag1_delay" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <channel index="8" id="1204599155:0" name="clk" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <channel index="9" id="867193363:0" name="flag2" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <channel index="10" id="1969879125:0" name="flag1" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <channel index="11" id="1444705791:0" name="flag2_temp" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <channel index="12" id="1880357099:0" name="flag1_temp" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <channel index="13" id="1044352853:0" name="y" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <channel index="14" id="1930644715:0" name="cp6" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <channel index="15" id="1244437322:0" name="z6" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <channel index="16" id="1404753642:0" name="cp5" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <channel index="17" id="112957185:0" name="z5" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <channel index="18" id="1744995468:0" name="cp4" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <channel index="19" id="1923916173:0" name="z4" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <channel index="20" id="414502901:0" name="cp3" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <channel index="21" id="2045859527:0" name="z3" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <channel index="22" id="229986820:0" name="cp2" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <channel index="23" id="957703155:0" name="z2" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <channel index="24" id="1955047813:0" name="cp1" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <channel index="25" id="1456373082:0" name="z1" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <channel index="26" id="90073566:0" name="Signal" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <channel index="27" id="1331884648:0" name="lmdtemp" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <channel index="28" id="116004537:0" name="lmdmin" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <channel index="29" id="36309502:0" name="lmd" label="" dim="1" unit="" min="-2.0" max="2.0" />
+      <channel index="30" id="2120381118:0" name="lmdMax" label="" dim="1" unit="" min="-2.0" max="2.0" />
+    </analog>
+    <digital />
+  </output>
+</project>
